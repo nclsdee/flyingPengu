@@ -1,0 +1,24 @@
+<div class="savedtrips">
+
+  <h2>My Trips</h2>
+
+  <% @trips.sort_by(&:created_at).reverse.each do |trip|  %>
+
+  <div class="row-fluid">
+
+    <div class="col-xs-12 col-sm-4"">
+      <div class="saved trips">
+
+        <%= link_to trips_path(trip) do %>
+
+        <div class="trip-card savedtrips-card">
+          <h5>Details:</h5>
+          <ul>
+            <li>Description: <%= trip.name  %></li>
+          </ul>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
