@@ -25,9 +25,13 @@ class TripsController < ApplicationController
         hometown.trip = @trip
         hometown.save
       end
+
+      redirect_to trips_path
+
+    else
+      render :new
     end
 
-    redirect_to trip_path(@trip)
   end
 
   def edit
