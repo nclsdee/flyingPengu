@@ -59,6 +59,7 @@ h1 {
   font-weight: 700;
   color: #fff;
   margin: 0 0 1.5rem;
+  text-shadow: 1px 2px 2px #333333;
 }
 
 i {
@@ -122,8 +123,10 @@ a.btn:hover {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
-  margin-left: 130px;
+  display: flex;
+  flex-direction: column;
   font-size: 15px;
+  opacity: 0.9;
 }
 
 .flex-form input[type="submit"]:hover {
@@ -131,14 +134,7 @@ a.btn:hover {
   border: 1px solid #01d5da
 }
 
-.flex-form {
-  display: -webkit-box;
-  display: flex;
-  z-index: 10;
-  position: relative;
-  width: 500px;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
-}
+
 
 .flex-form > * {
   border: 0;
