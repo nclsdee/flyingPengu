@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= simple_form_for @trip do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :name %>
+
+        <%= f.fields_for :hometowns do |ff| %>
+          <% 3.times do |i| %>
+          <div class="row">
+            <div class="col-md-4">
+              <%= ff.input :city, input_html: { name: "trip[hometowns][][city]" } %>
+            </div>
+            <div class="col-md-4">
+              <%= ff.input :number_traveller, input_html: { name: "trip[hometowns][][number_traveller]" } %>
+            </div>
+            <div class="col-md-4">
+              <%= ff.input :number_traveller, input_html: { name: "trip[hometowns][][number_traveller]" } %>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+
+        <%= f.button :submit, class: "btn-primary" %>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
