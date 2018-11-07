@@ -1,11 +1,12 @@
 class TripsController < ApplicationController
-  before_action :find_trip
+  skip_before_action :authenticate_user!
 
   def index
     @trips = Trip.all
   end
 
   def show
+    @trip = Trip.find(params[:id])
   end
 
   def new
@@ -13,22 +14,35 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(trip_params)
-    @trip.save
+    @trip = Trip.new(name: trip_params[:name])
+    @trip.user = current_user
 
-    redirect_to root_url
+    if @trip.save
+      trip_params[:hometowns].each do |hometown_params|
+        next unless hometown_params[:city].present?
+        # hometown_params = {"city"=>"Paris", "number_traveller"=>"6"}
+        hometown = Hometown.new(hometown_params)
+        hometown.trip = @trip
+        hometown.save
+      end
+    end
+
+    redirect_to trip_path(@trip)
   end
 
   def edit
+    @trip = Trip.find(params[:id])
   end
 
   def update
+    @trip = Trip.find(params[:id])
     @trip.update(trip_params)
 
     redirect_to root_url
   end
 
   def destroy
+    @trip = Trip.find(params[:id])
     @trip.destroy
 
     redirect_to root_url
@@ -36,9 +50,6 @@ class TripsController < ApplicationController
 
   private
 
-  def find_trip
-    @trip = Trip.find(params[:id])
-  end
 
   def trip_params
     params.require(:trip).permit!
