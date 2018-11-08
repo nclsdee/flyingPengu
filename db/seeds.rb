@@ -36,8 +36,8 @@ p "Creating entries"
         trip: trip,
         city: cities1.sample,
         number_traveller: rand(1..3),
-        date_from: rand(1..3).week.from_now,
-        date_to: rand(3..5).week.from_now,
+        date_from: Date.new(2019,3,14),
+        date_to: Date.new(2019,3,18),
         results: nil
       )
 
@@ -45,8 +45,8 @@ p "Creating entries"
         trip: trip,
         city: cities2.sample,
         number_traveller: rand(1..3),
-        date_from: rand(1..3).week.from_now,
-        date_to: rand(3..5).week.from_now,
+        date_from: Date.new(2019,3,14),
+        date_to: Date.new(2019,3,18),
         results: nil
       )
 
@@ -54,8 +54,8 @@ p "Creating entries"
         trip: trip,
         city: cities3.sample,
         number_traveller: rand(1..3),
-        date_from: rand(1..3).week.from_now,
-        date_to: rand(3..5).week.from_now,
+        date_from: Date.new(2019,3,14),
+        date_to: Date.new(2019,3,18),
         results: nil
       )
 
