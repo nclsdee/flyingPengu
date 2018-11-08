@@ -27,3 +27,7 @@ $(".js-minus").click(function() {
   parent.find(".js-counter").text(value);
   parent.find(".js-input").val(value);
 });
+
+
+
+
