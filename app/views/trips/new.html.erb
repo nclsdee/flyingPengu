@@ -9,24 +9,38 @@
 
         <%= f.fields_for :hometowns do |ff| %>
           <% 3.times do |i| %>
-          <div class="row">
-            <div class="col-md-4">
+          <div class="row hometown">
+            <div class="col-md-5">
               <%= ff.input :city, input_html: { name: "trip[hometowns][][city]" } %>
             </div>
-            <div class="col-md-4">
-              <%= ff.input :number_traveller, input_html: { name: "trip[hometowns][][number_traveller]" } %>
+            <div class="col-md-2">
+              <%= ff.input :travellers, input_html: { type: "hidden", name: "trip[hometowns][][number_traveller]", class: "js-input" } %>
+              <div style="display: flex;">
+              <button type="button" class="js-minus">-</button>
+              <a class="js-counter">0</a></p>
+              <button type="button" class="js-plus">+</button>
+              </div>
             </div>
-            <div class="col-md-4">
-              <%= ff.input :number_traveller, input_html: { name: "trip[hometowns][][number_traveller]" } %>
+
+            <div class="col-md-2">
+              <%= ff.input :date_from, as: :string, required: false, input_html: {name: "trip[hometowns][][date_from]", id: "start_date#{i}"} %>
+            </div>
+
+              <div class="col-md-2">
+              <%= ff.input :date_to, as: :string, required: false, input_html: {name: "trip[hometowns][][date_to]", id: "end_date#{i}"} %>
+
             </div>
           </div>
           <% end %>
         <% end %>
 
-        <%= f.button :submit, class: "btn-primary" %>
+        <%= f.submit "Get results", class: "btn-primary" %>
+
       <% end %>
 
     </div>
   </div>
 
 </div>
+
+
