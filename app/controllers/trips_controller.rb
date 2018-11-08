@@ -1,12 +1,14 @@
 class TripsController < ApplicationController
   skip_before_action :authenticate_user!
 
+
   def index
-    @trips = Trip.all
+    @trips = Trip.where(user_id: current_user.id)
   end
 
   def show
     @trip = Trip.find(params[:id])
+    @airports = Trip.airport_parse
   end
 
   def new

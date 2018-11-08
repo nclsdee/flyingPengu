@@ -40,9 +40,9 @@ class Trip < ApplicationRecord
     sorted_results = result.map do |key, value|
       # key: "DUB"
       # value: array
-        value.sort_by { |value| value["price"]}.map {|value| value.slice('flyTo', 'flyFrom', 'price')}
-        # value.sort_by { |value| value["price"]}.map {|value| value}
-        # value.sort_by { |value| value["price"]}.map {|value| value.slice('flyTo', 'flyFrom', 'price', 'quality', 'fly_duration', 'return_duration', 'airlines', 'deep_link')}
+        # value.sort_by { |value| value["price"]}.map {|value| value.slice('flyTo', 'flyFrom', 'price')}
+        value.sort_by { |value| value["price"]}.map {|value| value}
+      # value.sort_by { |value| value["price"]}.map {|value| value.slice('flyTo', 'flyFrom', 'price', 'quality', 'fly_duration', 'return_duration', 'airlines', 'deep_link')}
     end
 
     sorted_results
@@ -81,4 +81,10 @@ class Trip < ApplicationRecord
 
     sorted_city_scores = cities_scores.sort_by {|_key, value| value[0] }.to_h
   end
+
+  def self.airport_parse
+    file = File.read("#{Rails.root}/config/airports.json")
+    airports = JSON.parse(file)
+  end
+
 end
