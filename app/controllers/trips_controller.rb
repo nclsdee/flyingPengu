@@ -17,16 +17,20 @@ class TripsController < ApplicationController
     @trip = Trip.new(name: trip_params[:name])
     @trip.user = current_user
 
+
     if @trip.save
       trip_params[:hometowns].each do |hometown_params|
-        next unless hometown_params[:city].present?
+        next unless hometown_params[1][:city].present?
         # hometown_params = {"city"=>"Paris", "number_traveller"=>"6"}
-        hometown = Hometown.new(hometown_params)
+        hometown_params[1][:number_traveller].to_i
+        hometown = Hometown.new(trip_params[1])
         hometown.trip = @trip
         hometown.save
+
+
       end
 
-      redirect_to trips_path
+      redirect_to trip_path(@trip)
 
     else
       render :new
@@ -57,6 +61,7 @@ class TripsController < ApplicationController
 
   def trip_params
     params.require(:trip).permit!
+
   end
 
 end

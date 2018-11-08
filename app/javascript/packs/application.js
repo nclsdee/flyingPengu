@@ -8,7 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
-
+import "bootstrap";
 import "../plugins/flatpickr"
 
 $(".js-plus").click(function() {
@@ -27,5 +27,3 @@ $(".js-minus").click(function() {
   parent.find(".js-counter").text(value);
   parent.find(".js-input").val(value);
 });
-
-import "bootstrap";
