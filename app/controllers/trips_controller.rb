@@ -1,3 +1,5 @@
+require 'json'
+require 'open-uri'
 class TripsController < ApplicationController
   skip_before_action :authenticate_user!
 
@@ -25,10 +27,12 @@ class TripsController < ApplicationController
         next unless hometown_params[1][:city].present?
         # hometown_params = {"city"=>"Paris", "number_traveller"=>"6"}
         hometown_params[1][:number_traveller].to_i
-        hometown = Hometown.new(trip_params[1])
+        hometown = Hometown.new(hometown_params[1])
         hometown.trip = @trip
         hometown.save
-
+        api_url = "https://api.skypicker.com/flights?flyFrom=#{hometown_params[1][:city]}&dateFrom=#{hometown_params[1][:date_from]}&dateTo=#{hometown_params[1][:date_from]}&returnFrom=#{hometown_params[1][:date_to]}&returnTo=#{hometown_params[1][:date_to]}&passengers=#{hometown_params[1][:number_traveller].to_i}&adults=1&locale=en&partner=picky&partner_market=us&v=3&xml=0&curr=EUR&price_from=1&maxstopovers=1&limit=100&sort=price&asc=1"
+        json = JSON.parse(open(api_url).read)
+        hometown.update(results: json)
 
       end
 
