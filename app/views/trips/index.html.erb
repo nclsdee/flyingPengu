@@ -4,24 +4,29 @@
 
    <% @trips.sort_by(&:created_at).reverse.each do |trip|  %>
 
- <div class="column">
-     <div class="demo-title"></div>
+ <!-- <div class="column"> -->
+  <div class="col-xs-12 col-sm-4"">
+     <div class="demo-title">
+
+     <%= link_to trip_path(trip) do %>
+
      <!-- Post-->
      <div class="post-module hover">
        <!-- Thumbnail-->
+
        <div class="thumbnail">
          <div class="date">
-           <div class="day">Trip</div>
+           <div class="day"> Trip<!-- <img src="https://cdn.dribbble.com/users/493/screenshots/3750260/penguin_avatar_2017.png"/> --></div>
            <div class="month"></div>
          </div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg"/>
        </div>
        <!-- Post Content-->
        <div class="post-content">
          <div class="category">Photo</div>
-         <h1 class="title">Group name: <%= trip.name %></h1>
+         <h1 class="title"><%= trip.name %></h1>
 
         <% trip.hometowns.each do |hometown| %>
-         <h2 class="sub_title">Hometown city: <%= hometown.city  %></h2>
+         <h2 class="sub_title">Hometown airport: <%= hometown.city  %></h2>
          <p class="description">Travelers: <%= hometown.number_traveller  %></p>
          <div class="post-meta">
           <span class="timestamp"><i class="fa fa-plane"></i>from: <%= hometown.date_from  %></span>
@@ -29,11 +34,11 @@
          </div>
          <% end %>
 
-
-
        </div>
      </div>
-   </div>
+     </div>
+ </div>
+ <% end %>
  </div>
 
 <!--
