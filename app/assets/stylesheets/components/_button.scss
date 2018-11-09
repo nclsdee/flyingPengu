@@ -23,3 +23,10 @@
   border-right: 5px solid transparent;
   border-top: 5px solid #53c9cc;
 }
+
+button:active {
+outline: none;
+border: none;
+}
+
+button:focus {outline:0 !important;}

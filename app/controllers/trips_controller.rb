@@ -10,7 +10,27 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    # @results = @trip.best_city.first(5)
+    @results = @trip.best_city_extended.first(5)
     @airports = Trip.airport_parse
+    @airlines = Trip.airline_parse
+    @hometowns = @trip.hometowns.map {|towns| towns.slice('city')}
+    @hometownMarkers = @hometowns.map do |hometown|
+      {
+        lat: Trip.airport_by_iata(hometown['city'])["latitude"].to_f,
+        lng: Trip.airport_by_iata(hometown['city'])["longitude"].to_f,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
+
+   @destinationMarkers = @results.map do |city|
+      {
+        lat: city[1][1][0]["latitude"],
+        lng: city[1][1][0]["longitude"],
+        icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def new
