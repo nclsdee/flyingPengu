@@ -9,6 +9,8 @@ class HometownsController < ApplicationController
     @hometown = Hometown.new(hometown_params)
     @hometown.trip = Trip.find(params[:trip_id])
 
+
+    @hometown.trip_id = @trip.id
     @hometown.save
 
     redirect_to trips_path
