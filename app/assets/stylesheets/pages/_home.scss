@@ -44,14 +44,35 @@ ul, nav{
 }
 
 a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.9;
 }
 
+
 a:hover {
   opacity: 1;
+}
+
+.js-counter {
+  color:#333333
+}
+
+.btn-primary {
+  background: #53c9cc;
+  border: 1px solid #53c9cc;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 15px;
+  opacity: 0.9;
+
+}
+
+.btn-primary:hover {
+  background: #01d5da;
+  border: 1px solid #01d5da;
 }
 
 h1 {

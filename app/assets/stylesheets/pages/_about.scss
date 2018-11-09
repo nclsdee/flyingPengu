@@ -1,0 +1,49 @@
+.container-fluid {
+    padding: 0;
+}
+
+.content-page h1,
+.content-page h2,
+.content-page h3,
+.content-page h4 {
+    margin: 0;
+    padding: 20px 0 10px 0;
+}
+
+.content-page .row {
+    padding: 30px 0 40px 0;
+}
+
+.content-page h2 {
+    color: #333333;
+    font-size: 30px;
+}
+.content-page p {
+    color: #333333;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.content-page a {
+    color: #000;
+    font-weight: 600;
+}
+
+.content-page .hero {
+    height: 250px;
+    background-image: url("http://www.storytrender.com/wp-content/uploads/2017/09/4_CATERS_penguins_05-1024x625.jpg");/*url("/images/headers/header-background.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-page .hero h1 {
+    color: #fff;
+    font-size: 48px;
+}
+.content-page .hero p {
+    color: #ebf0f5;
+    font-size: 14px;
+}

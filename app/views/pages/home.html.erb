@@ -4,10 +4,16 @@
   <div class="cover">
     <h1>We travel better together</h1>
     <h1>Discover what's out there with your friends.</h1>
-<% button_to "", new_trip_path %>
-    <form  class="flex-form" action="/trips/new" >
+
+  <% if user_signed_in? %>
+  <form  class="flex-form" action="/trips/new" >
+    <input type="submit" value="Search for flights" >
+  </form>
+  <%else  %>
+    <form  class="flex-form" action="/users/sign_in" >
       <input type="submit" value="Start your journey here" >
     </form>
+  <%end %>
 
   </div>
 

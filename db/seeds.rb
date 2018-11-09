@@ -75,7 +75,7 @@ p "Creating entries"
       # Hometown.create(
       #   trip: trip,
       #   city: cities.sample,
-      #   number_traveler: rand(1..3),
+      #   number_traveller: rand(1..3),
       #   date_from: rand(1..3).week.ago,
       #   date_to: rand(3..5).week.ago,
       #   url = "https://api.skypicker.com/flights?flyFrom=#{hometown.city}&dateFrom=#{hometown.date_from}&dateTo=#{hometown.date_from}&returnFrom=#{hometown.date_to}&returnTo=#{hometown.date_to}&passengers=#{hometown.number_traveler}&adults=1&locale=en&partner=picky&partner_market=us&v=3&xml=0&curr=EUR&price_from=1&maxstopovers=1&limit=100&sort=price&asc=1"
