@@ -9,8 +9,9 @@
         <%= f.input :name %>
 
         <%= f.fields_for :hometowns do |ff| %>
-          <% 3.times do |i| %>
-          <div class="row hometown">
+          <% 10.times do |i| %>
+
+          <div class="row hometown" style="display: <%= i.zero? ? 'block' : 'none'; %>">
             <div class="col-md-5">
               <%= ff.input :city, input_html: { name: "trip[hometowns][#{i}][city]" } %>
             </div>
@@ -29,11 +30,23 @@
 
               <div class="col-md-2">
               <%= ff.input :date_to, as: :string, required: false, input_html: {name: "trip[hometowns][#{i}][date_to]", id: "end_date#{i}"} %>
-
             </div>
           </div>
           <% end %>
         <% end %>
+
+
+     <div style="display: flex;">
+      <div class="btn-one">
+      <div class="btn-primary" id="remove-extra-field" style="width: 55px; text-align: center;">-</div>
+       </div>
+        <br>
+        <div class="btn-two">
+       <div class="btn-primary" id="add-extra-field" style="width: 55px; text-align: center;">+</div>
+      </div>
+     </div>
+
+        <br>
 
         <%= f.submit "Get results", class: "btn-primary" %>
 
