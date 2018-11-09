@@ -4,7 +4,10 @@ class Trip < ApplicationRecord
   # accepts_nested_attributes_for :hometowns
   validates :name, presence: true
 
-    def airports_in_common
+  AIRPORTS = JSON.parse(File.read("#{Rails.root}/config/airports.json"))
+  AIRLINES = JSON.parse(File.read("#{Rails.root}/config/airlines.json"))
+
+  def airports_in_common
     destinations_by_hometowns = {}
 
     self.hometowns.each do |hometown|
@@ -79,12 +82,38 @@ class Trip < ApplicationRecord
       cities_scores[city] = [score, flights_for_this_city]
     end
 
-    sorted_city_scores = cities_scores.sort_by {|_key, value| value[0] }.to_h
+    cities_scores.sort_by {|_key, value| value[0] }.to_h
+  end
+
+  def best_city_extended
+    sorted_city_scores = self.best_city
+    new_data = {}
+    sorted_city_scores.each do |key, value|
+      airport = Trip.airport_by_iata(key)
+
+      value[1] = value[1].map do |flight|
+        flight['city'] = airport['city']
+        flight['country'] = airport['country']
+        flight['latitude'] = airport['latitude'].to_f
+        flight['longitude'] = airport['longitude'].to_f
+        flight
+      end
+
+      new_data[key] = [value[0], value[1]]
+    end
+    new_data
   end
 
   def self.airport_parse
-    file = File.read("#{Rails.root}/config/airports.json")
-    airports = JSON.parse(file)
+    AIRPORTS
+  end
+
+  def self.airport_by_iata(iata)
+    self.airport_parse[iata]
+  end
+
+  def self.airline_parse
+    AIRLINES
   end
 
 end
