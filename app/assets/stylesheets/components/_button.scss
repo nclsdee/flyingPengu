@@ -1,0 +1,25 @@
+.button-flyingpengu {
+  background-color: #53c9cc;
+  color: #fff;
+  border-radius: 2px;
+  border: 1px solid #53c9cc;
+  opacity: 0.7;
+  font-size: 12px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-flyingpengu:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: white;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #53c9cc;
+}
