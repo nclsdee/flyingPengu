@@ -27,3 +27,18 @@ $(".js-minus").click(function() {
   parent.find(".js-counter").text(value);
   parent.find(".js-input").val(value);
 });
+
+
+$("#add-extra-field").click(function () {
+    $(".hometown:hidden").first().show();
+});
+
+$("#remove-extra-field").click(function () {
+    $(".hometown:visible").last().hide();
+});
+
+console.log('ciao Lucrezia')
+
+
+
+
