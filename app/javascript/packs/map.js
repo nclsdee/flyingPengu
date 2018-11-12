@@ -116,14 +116,6 @@ if (markersDestination.length === 0) {
   map.fitLatLngBounds(markersDestination);
 }
 
-if (markersHometown.length === 0) {
-  map.setZoom(2);
-} else if (markersHometown.length === 1) {
-  map.setCenter(markersHometown[0].lat, markersHometown[0].lng);
-  map.setZoom(14);
-} else {
-  map.fitLatLngBounds(markersHometown);
-}
 map.addStyle({
   styles: styles,
   mapTypeId: 'map_style'

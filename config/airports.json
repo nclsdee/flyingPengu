@@ -67846,5 +67846,101 @@
 "altitude": "0",
 "timezone": "",
 "dst": ""
+},
+"BER": {
+"name": "All Airports",
+"city": "Berlin",
+"country": "Germany",
+"iata": "BER",
+"latitude": "52.520008",
+"longitude": "13.404954"
+},
+"PAR": {
+"name": "All Airports",
+"city": "Paris",
+"country": "France",
+"iata": "PAR",
+"latitude": "48.864716",
+"longitude": "2.349014"
+},
+"LON": {
+"name": "All Airports",
+"city": "London",
+"country": "United Kingdom",
+"iata": "LON",
+"latitude": "51.509865",
+"longitude": "-0.118092"
+},
+"NYC": {
+"name": "All Airports",
+"city": "New York",
+"country": "United States",
+"iata": "NYC",
+"latitude": "40.730610",
+"longitude": "-73.935242"
+},
+"CHI": {
+"name": "All Airports",
+"city": "Chicago",
+"country": "United States",
+"iata": "CHI",
+"latitude": "41.881832",
+"longitude": "-87.623177"
+},
+"TYO": {
+"name": "All Airports",
+"city": "Tokyo",
+"country": "Japan",
+"iata": "TYO",
+"latitude": "35.652832",
+"longitude": "139.839478"
+},
+"BJS": {
+"name": "All Airports",
+"city": "Beijing",
+"country": "China",
+"iata": "BJS",
+"latitude": "39.991844",
+"longitude": "116.310173"
+},
+"MIL": {
+"name": "All Airports",
+"city": "Milan",
+"country": "Italy",
+"iata": "MIL",
+"latitude": "45.464211",
+"longitude": "9.191383"
+},
+"WAS": {
+"name": "All Airports",
+"city": "Washington",
+"country": "United States",
+"iata": "WAS",
+"latitude": "38.900497",
+"longitude": "-77.007507"
+},
+"YMQ": {
+"name": "All Airports",
+"city": "Montreal",
+"country": "Canada",
+"iata": "YMQ",
+"latitude": "45.501690",
+"longitude": "-73.567253"
+},
+"YTO": {
+"name": "All Airports",
+"city": "Toronto",
+"country": "Canada",
+"iata": "YTO",
+"latitude": "43.653225",
+"longitude": "-79.383186"
+},
+"OGU": {
+"name": "Ordu–Giresun Airport",
+"city": "Ordu",
+"country": "Turkey",
+"iata": "OGU",
+"latitude": "40.966667",
+"longitude": "38.08"
 }
 }

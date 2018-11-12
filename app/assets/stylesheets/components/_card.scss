@@ -34,8 +34,36 @@
   text-align: left;
   justify-content: space-between;
   align-item: center;
+  position: relative;
 }
 
 .card-body {
   background-color: white;
 }
+
+.trip-details {
+margin-left: 5px;
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+h6 {
+  font-size: 16px;
+}
+
+}
+
+#number-flights {
+  p {
+    font-size: 10px;
+  }
+position: absolute;
+bottom: 0px;
+right: 5px;
+}
+
+.flights {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
