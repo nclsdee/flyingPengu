@@ -37,7 +37,7 @@
             <span class="comments"><i class="fa fa-send"></i><a href="#">To: <%= hometown.date_to  %></a></span>
           </div>
           <% end %>
-
+       <%= link_to "Delete trip", trip_path(trip), method: :delete, data: { confirm: "You sure?" } %>
         </div>
         <% end %>
       </div>

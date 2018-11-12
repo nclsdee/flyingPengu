@@ -79,7 +79,7 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @trip.destroy
 
-    redirect_to root_url
+    redirect_to trips_url
   end
 
   private

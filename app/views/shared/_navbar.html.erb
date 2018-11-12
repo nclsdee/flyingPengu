@@ -35,9 +35,9 @@
               <% end %>
             </li>
             <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fas fa-trash-alt"></i> <%= t(".sign_out", default: "Delete user") %>
-              <% end %>
+               <%= link_to user_registration_path, method: :delete do %>
+               <i class="fas fa-trash-alt"></i> <%= t(".destroy", default: "Delete user") %>
+             <% end %>
             </li>
           </ul>
         </div>
