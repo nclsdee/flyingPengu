@@ -29,6 +29,7 @@ class Trip < ApplicationRecord
       airports.each do |airport|
         hometown.results["data"].each do |flight|
           if flight['flyTo'] == airport
+            flight['hometown'] = hometown['city']
             possible_connections << flight
           end
         end
@@ -54,7 +55,7 @@ class Trip < ApplicationRecord
   def best_pricing
     possible_connections = self.sorted_possible_connections.map do |flights|
       flights.map do |flight|
-        hometown = Hometown.find_by(city: flight['flyFrom'])
+        hometown = Hometown.find_by(city: flight['hometown'])
 
         new_price = hometown.number_traveller * flight['price']
         flight['price_total'] = new_price
@@ -92,7 +93,7 @@ class Trip < ApplicationRecord
       airport = Trip.airport_by_iata(key)
 
       value[1] = value[1].map do |flight|
-        if airport[flight['city']].present?
+        if airport.present?
         flight['city'] = airport['city']
         flight['country'] = airport['country']
         flight['latitude'] = airport['latitude'].to_f

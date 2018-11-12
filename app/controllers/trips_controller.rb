@@ -16,9 +16,11 @@ class TripsController < ApplicationController
     @airlines = Trip.airline_parse
     @hometowns = @trip.hometowns.map {|towns| towns.slice('city')}
     @hometownMarkers = @hometowns.map do |hometown|
+
       {
         lat: Trip.airport_by_iata(hometown['city'])["latitude"].to_f,
         lng: Trip.airport_by_iata(hometown['city'])["longitude"].to_f,
+        icon: view_context.image_path('hometown-pin medium.png')
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
     end
@@ -27,9 +29,10 @@ class TripsController < ApplicationController
       {
         lat: city[1][1][0]["latitude"],
         lng: city[1][1][0]["longitude"],
-        icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+        icon: view_context.image_path('destination-pin medium.png')
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
+
     end
   end
 
