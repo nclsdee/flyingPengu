@@ -33,11 +33,13 @@ $(".js-minus").click(function() {
 
 
 $("#add-extra-field").click(function () {
-    $(".hometown:hidden").first().show();
+  $(".hometown:hidden").first().show();
 });
 
 $("#remove-extra-field").click(function () {
+  if( $(".hometown:visible").length !== 1 ){
     $(".hometown:visible").last().hide();
+  }
 });
 
 
