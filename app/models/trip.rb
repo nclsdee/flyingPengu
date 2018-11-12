@@ -92,11 +92,13 @@ class Trip < ApplicationRecord
       airport = Trip.airport_by_iata(key)
 
       value[1] = value[1].map do |flight|
+        if airport[flight['city']].present?
         flight['city'] = airport['city']
         flight['country'] = airport['country']
         flight['latitude'] = airport['latitude'].to_f
         flight['longitude'] = airport['longitude'].to_f
         flight
+      end
       end
 
       new_data[key] = [value[0], value[1]]
