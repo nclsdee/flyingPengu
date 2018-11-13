@@ -80,6 +80,7 @@ h1 {
   font-weight: lighter;
   color: black;
   margin: 0 0 1.5rem;
+  text-align: center;
 }
 
 i {
@@ -138,7 +139,8 @@ a.btn:hover {
   background: #53c9cc;
   border: 1px solid #53c9cc;
   color: #fff;
-  padding: 0 30px;
+  margin: 20px auto;
+  padding: 0 10px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -158,7 +160,6 @@ a.btn:hover {
 
 .flex-form > * {
   border: 0;
-  padding: 0 0 0 10px;
   background: #fff;
   line-height: 50px;
   font-size: 1rem;
@@ -199,31 +200,4 @@ input[type="search"] {
   .cover {
     padding: 20px;
   }
-
-  #madeby {
-    padding: 30px 20px;
-  }
 }
-
-@media all and (max-width:360px) {
-  header nav li{
-    margin: 0 10px;
-  }
-
-  .flex-form {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-
-  input[type="search"] {
-    flex-basis: 0;
-  }
-
-  label {
-    display: none;
-  }
-}
-

@@ -1,4 +1,4 @@
-<h4 style="margin-left: 15px"> These are the cheapeast cities for your trip! </h4>
+<h4 style="margin-left: 15px"> These are the best destinations we could find for your trip! </h4>
 <div class="show-page">
   <div class="container results">
     <div class="accordion" id="accordionExample">
@@ -20,35 +20,37 @@
         </div>
 
         <div id="collapseOne<%= key %>" class="collapse" aria-labelledby="heading<%= key %>" data-parent="#accordionExample">
-          <div class="card-body">
+          <div class="card-body" id="flightcard">
 
             <div class="flights">
-              <h4>Flights to <%= Trip.airport_by_iata(key)["city"] %>, <%= Trip.airport_by_iata(key)['country'] %>:</h4>
 
-              <ul>
                 <% value[1].each do |flight| %>
-                <li>
-                  From <%= Trip.airport_by_iata(flight['flyFrom'])["city"] %>: <%= flight['price'] %>€
-                  <div class="flightdetails">
-                    <ul>
-                      <li> Outbound flight:
-
-                        <%= Time.at(flight['route'][0]['dTimeUTC']).strftime("%H:%M")%> - <%= Time.at(flight['route'][0]['aTimeUTC']).strftime("%H:%M")%> Airline: <%= @airlines["response"].select{|airport| airport["iata_code"] == flight['route'][0]['airline'] }[0]["name"] %> Flight number: <%= flight['route'][0]['airline'] %> <%= flight['route'][0]['flight_no'] %>
-
-                      </li>
-
-                      <li> Return flight:
-
-                        <%= Time.at(flight['route'][1]['dTimeUTC']).strftime("%H:%M")%> - <%= Time.at(flight['route'][1]['aTimeUTC']).strftime("%H:%M")%> Airline: <%= @airlines["response"].select{|airport| airport["iata_code"] == flight['route'][1]['airline'] }[0]["name"] %>
-
-                        Flight number: <%= flight['route'][1]['airline'] %> <%= flight['route'][1]['flight_no'] %>
-                      </li>
-                    </ul>
-                    <a class="button-flyingpengu" href="<%= flight['deep_link'] %>" role="button" target="_blank">Book now!</a>
-                  </div>
-                </li>
+                <% outbound_flight = [] %>
+                <% return_flight = [] %>
+                <% flight['route'].each do |leg| %>
+                <% leg['return'] == 0 ? outbound_flight << leg : return_flight << leg %>
                 <% end %>
-              </ul>
+              <div class="flight">
+
+                <div class="flight-general">
+                  <h5> From <%= Trip.airport_by_iata(flight['flyFrom'])["city"] %>: <%= flight['price'] %>€ </h5>
+                </div>
+                  <div class="flightdetails">
+                    <div class="outbound">
+                  <h5> Outbound flight on <%= Time.at(outbound_flight.first['aTimeUTC']).strftime("%d.%m.%y")%>: </h5>
+
+                     <p><%= Time.at(outbound_flight.first['dTimeUTC']).strftime("%H:%M")%> - <%= Time.at(outbound_flight.last['aTimeUTC']).strftime("%H:%M")%> Airline: <%= @airlines["response"].select{|airport| airport["iata_code"] == flight['route'][0]['airline'] }[0]["name"] %> Flight number: <%= flight['route'][0]['airline'] %> <%= flight['route'][0]['flight_no'] %></p>
+                      </div>
+                    <div class="return">
+                 <h5> Return flight on <%= Time.at(return_flight.first['aTimeUTC']).strftime("%d.%m.%y")%>: </h5>
+                     <p> <%= Time.at(return_flight.first['dTimeUTC']).strftime("%H:%M")%> - <%= Time.at(return_flight.last['aTimeUTC']).strftime("%H:%M")%> Airline: <%= @airlines["response"].select{|airport| airport["iata_code"] == flight['route'][1]['airline'] }[0]["name"] %> Flight number: <%= flight['route'][1]['airline'] %> <%= flight['route'][1]['flight_no'] %> </p>
+                      </div>
+                  </div>
+                    <div class="book-now-button">
+                    <a class="button-flyingpengu" href="<%= flight['deep_link'] %>" role="button" target="_blank">Book now!</a>
+                    </div>
+              </div>
+                <% end %>
             </div>
 
           </div>
@@ -57,21 +59,17 @@
       </div>
       <% end %>
     </div>
-    <%= link_to "Search again", new_trip_path %>
-
+    <div class="search-again">
+    <a class="button-flyingpengu" role="button" <%= link_to "Search again", new_trip_path %> </a>
+</div>
   </div>
 
   <div
   id="map"
-  style="width: 50%;
-  height: 85vh; margin-top: 10px; "
   data-destination="<%= @destinationMarkers.to_json %>"
   data-hometown="<%= @hometownMarkers.to_json %>"
   ></div>
 </div>
-
-
-
 
 
 
