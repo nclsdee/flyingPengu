@@ -140,7 +140,7 @@ a.btn:hover {
   border: 1px solid #53c9cc;
   color: #fff;
   margin: 20px auto;
-  padding: 0 10px;
+  padding: 5px 30px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -183,6 +183,22 @@ input[type="search"] {
   .flex-form {
     width: 100%;
   }
+
+  .flex-form input[type="submit"] {
+  background: #53c9cc;
+  border: 1px solid #53c9cc;
+  color: #fff;
+  margin: 20px auto;
+  padding: 0 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  opacity: 0.9;
+}
 
   input[type="search"] {
     flex-basis: 100%;
