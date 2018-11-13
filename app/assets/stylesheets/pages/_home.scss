@@ -140,7 +140,7 @@ a.btn:hover {
   border: 1px solid #53c9cc;
   color: #fff;
   margin: 20px auto;
-  padding: 5px 30px;
+  padding: 5px 40px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -175,7 +175,7 @@ input[type="search"] {
 
 
 
-@media all and (max-width:800px) {
+@media all and (max-width:1000px) {
   body {
     font-size: 0.9rem;
   }
