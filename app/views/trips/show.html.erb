@@ -6,10 +6,14 @@
       <div class="card">
         <div class="card-header" id="heading<%= key %>">
           <div class="trip-details">
+          <span>
           <h5 class="mb-0">
             <%= Trip.airport_by_iata(key)["city"] %>, <%= Trip.airport_by_iata(key)['country'] %> <br>
           </h5>
-           <h6> Average price per person: <%= value[0].round %>€ </h6>
+          </span>
+          <span id="flight-price">
+           <h6> Average price per person: </h6> <h6 id="price"> <%= value[0].round %>€ </h6>
+          </span>
           </div>
           <div id="number-flights">
           <p>See <%= @hometowns.length %> flights</p>
@@ -33,7 +37,12 @@
               <div class="flight">
 
                 <div class="flight-general">
-                  <h5> From <%= Trip.airport_by_iata(flight['flyFrom'])["city"] %>: <%= flight['price'] %>€ </h5>
+                  <span>
+                  <h5> From <%= Trip.airport_by_iata(flight['flyFrom'])["city"] %>:</h5>
+                  </span>
+                  <span>
+                  <h4><%= flight['price'] %>€ </h4>
+                  </span>
                 </div>
                   <div class="flightdetails">
                     <div class="outbound">
