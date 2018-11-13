@@ -37,7 +37,7 @@
   position: relative;
 }
 
-.card-body {
+div#flightcard {
   background-color: white;
 }
 
@@ -62,8 +62,105 @@ bottom: 0px;
 right: 5px;
 }
 
+
 .flights {
   padding: 5px 10px;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.flight-general {
+  min-width: 150px;
+  h5 {
+  font-size: 16px;
+  font-weight: bold;
+  }
+  flex: 1 0 25%;
+
+}
+
+.flightdetails {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  max-width: 500px;
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+  h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  flex: 1 1 70%;
+}
+
+.book-now-button {
+  flex: 0 0 15%;
+  flex-shrink: 0;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.search-again {
+  margin-top: 20px;
+}
+
+@media(max-width: 720px) {
+  .flight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0px;
+
+}
+
+.flight-general {
+  min-width: 150px;
+  h5 {
+  font-size: 16px;
+  font-weight: bold;
+  }
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ededed;
+}
+
+.flightdetails {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 95%
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+  h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  flex: 1 1 60%;
+}
+
+.book-now-button {
+  flex: 0 0 15%;
+  flex-shrink: 0;
+  margin: 20px 0px;
+}
+
 }
 
