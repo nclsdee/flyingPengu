@@ -3,6 +3,8 @@ class Trip < ApplicationRecord
   has_many :hometowns, dependent: :destroy
   # accepts_nested_attributes_for :hometowns
   validates :name, presence: true
+  validates_associated :hometowns
+
 
   AIRPORTS = JSON.parse(File.read("#{Rails.root}/config/airports.json"))
   AIRLINES = JSON.parse(File.read("#{Rails.root}/config/airlines.json"))

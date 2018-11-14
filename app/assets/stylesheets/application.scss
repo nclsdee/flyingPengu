@@ -47,6 +47,7 @@ body {
   border-bottom-color: #ccc;
   box-shadow:
     0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
 
 .autocomplete-result {
@@ -63,6 +64,23 @@ body {
   opacity: .8;
   font-size: smaller;
 }
+
+.form-control {
+  border-radius: 24px;
+}
+
+.fas {
+  background-color: #69d9dd;
+  color: white;
+  border-radius: 21px;
+}
+
+.js-open-wait {
+  width: 100%;
+}
+
+
+
 
 $iPlus: 0;
 @for $i from 0 through 7 {

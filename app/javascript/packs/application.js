@@ -14,6 +14,8 @@ import _ from 'lodash';
 // import "../packs/autocomplete";
 import airports from "../packs/airports"
 
+console.log(this)
+
 $(".js-plus").click(function() {
   var parent = $(this).parents(".hometown");
   var value = parent.find(".js-counter").text();
@@ -173,6 +175,11 @@ function onKeyDown(e) {
   e.stopPropagation();
   e.preventDefault(); // prevent the default action (scroll / move caret)
 }
+
+
+
+
+
 
 
 

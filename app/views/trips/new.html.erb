@@ -1,6 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <h2>Hey You! Welcome to your Penguin Research!</h2>
+      <h3>Please enter your trip name and the hometown airports you and your friends are leaving from:</h3>
+
+
       <%= simple_form_for @trip do |f| %>
         <%= f.error_notification %>
 
@@ -11,14 +15,14 @@
 
           <div class="row hometown" style="display: <%= i.zero? ? 'block' : 'none'; %>">
             <div class="col-md-5">
-              <%= ff.input :city, input_html: {autocomplete: 'off', name: "trip[hometowns][#{i}][city]", class: "autocomplete" } %>
+              <%= ff.input :city, input_html: {autocomplete: 'off', name: "trip[hometowns][#{i}][city]", class: "autocomplete", placeholder: "Hometown airport" } %>
             </div>
             <div class="col-md-2">
-              <%= ff.input :travellers, input_html: { type: "hidden", name: "trip[hometowns][#{i}][number_traveller]", class: "js-input" } %>
-              <div style="display: flex;">
-              <button type="button" class="js-minus">-</button>
+              <%= ff.input :Adults, input_html: { type: "hidden", name: "trip[hometowns][#{i}][number_traveller]", class: "js-input" } %>
+              <div style="display: flex; align-content: center;">
+              <button type="button" class="js-minus fas fa-sort-down"></button>
               <a class="js-counter">0</a></p>
-              <button type="button" class="js-plus">+</button>
+              <button type="button" class="js-plus fas fa-sort-up"></button>
               </div>
             </div>
 
