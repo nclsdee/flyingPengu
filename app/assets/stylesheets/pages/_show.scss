@@ -6,7 +6,24 @@
   width: 50%;
   height: 85vh;
   margin-top: 10px;
-  }
+}
+
+.resultsfooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#email {
+    font-size: 12px;
+    height: 42px;
+    width: 215px;
+    margin-top: 15px;
+}
+
+.email-btn {
+
+}
 
 @media(max-width: 1000px) {
   .show-page {
@@ -21,6 +38,14 @@
   .results {
     width: 100%;
   }
+
+  #email {
+    font-size: 12px;
+    height: 40px;
+    width: 145px;
+    margin-top: 15px;
+}
+
 }
 
 
