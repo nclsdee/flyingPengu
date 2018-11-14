@@ -6,3 +6,4 @@ $(".js-open-wait").click(function() {
         $(".wait").show();
      }, 100);
    });
+

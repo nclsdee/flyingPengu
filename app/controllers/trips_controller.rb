@@ -6,9 +6,11 @@ class TripsController < ApplicationController
 
   def index
     @trips = Trip.where(user_id: current_user.id)
+
   end
 
   def show
+    @footer = true
     @trip = Trip.find(params[:id])
     # @results = @trip.best_city.first(5)
     @results = @trip.best_city_extended.first(5)
@@ -33,7 +35,19 @@ class TripsController < ApplicationController
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
 
+
     end
+    # user = params[:email]
+    # @path = trip_path(@trip)
+    # UserMailer.share(current_user, @trip, @path).deliver
+  end
+
+  def send_email
+    @trip = Trip.find(params["trip_id"].to_i)
+    @path = trip_path(@trip)
+    @email = params["email"]
+    UserMailer.share(@email, @trip, @path).deliver
+    redirect_to(@path)
   end
 
   def new

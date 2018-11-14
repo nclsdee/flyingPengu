@@ -62,7 +62,30 @@ a:hover {
 .btn-primary {
   background: #53c9cc;
   border: 1px solid #53c9cc;
-  padding: 10px 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 15px;
+  opacity: 0.9;
+  border-left: 1px solid white;
+
+}
+
+.btn-minus {
+  background: #f73d40;
+  border: 1px solid #f73d40;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 15px;
+  opacity: 0.9;
+
+}
+
+.btn-plus {
+  background: #5afc90;
+  border: 1px solid #5afc90;
+  padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s;
   font-size: 15px;

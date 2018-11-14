@@ -68,6 +68,13 @@
       </div>
       <% end %>
     </div>
+    <%= form_tag("/send-email/#{@trip.id}", :method => :get) do%>
+    <%= hidden_field_tag :trip_id, @trip.id %>
+
+     <%= text_field_tag 'email', "", placeholder: "Enter your friend's email"%>
+    <%= submit_tag "Send",:value => "Send", class: "button-flyingpengu far fa-envelope" %>
+
+    <%end%>
     <div class="search-again">
     <a class="button-flyingpengu" role="button" <%= link_to "Search again", new_trip_path %> </a>
 </div>
@@ -79,15 +86,3 @@
   data-hometown="<%= @hometownMarkers.to_json %>"
   ></div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
