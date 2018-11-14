@@ -68,16 +68,19 @@
       </div>
       <% end %>
     </div>
+      <div class="resultsfooter">
+        <div class="email">
     <%= form_tag("/send-email/#{@trip.id}", :method => :get) do%>
     <%= hidden_field_tag :trip_id, @trip.id %>
 
-     <%= text_field_tag 'email', "", placeholder: "Enter your friend's email"%>
-    <%= submit_tag "Send",:value => "Send", class: "button-flyingpengu far fa-envelope" %>
-
+     <%= text_field_tag 'email', "", placeholder: "Enter your friend's email to share"%>
+    <%= submit_tag "Send",:value => "Send", class: "button-flyingpengu email-btn" %>
     <%end%>
+    </div>
     <div class="search-again">
     <a class="button-flyingpengu" role="button" <%= link_to "Search again", new_trip_path %> </a>
 </div>
+  </div>
   </div>
 
   <div
