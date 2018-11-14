@@ -59,6 +59,11 @@ let startpicker = flatpickr('#start_date' + i, {
       var finalDayMoment = moment(dateStr, "DD-MM-YYYY");
       var finalDay = moment(finalDayMoment).toDate();
       endpicker.set('minDate', finalDay);
+
+      if (i === 0) {
+        $(".js-date-from").val(dateStr);
+      }
+
     },
   });
 
@@ -75,6 +80,10 @@ let startpicker = flatpickr('#start_date' + i, {
     minDate: $('#start_date' + i).attr('value'),
     onClose: function(selectedDates, dateStr, instance) {
       startpicker.set('maxDate', dateStr);
+
+      if (i === 0) {
+        $(".js-date-to").val(dateStr);
+      }
     },
   });
 

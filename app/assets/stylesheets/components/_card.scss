@@ -153,14 +153,14 @@ right: 5px;
 
 #flight-price {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-width: 270px;
 }
 
 #price {
-    font-weight: bold;
     color: #33a3a5;
     font-size: 22px;
+    margin-left: 10px;
 }
 
 @media(max-width: 1000px) {
@@ -216,6 +216,19 @@ right: 5px;
   align-self: flex-end;
 
 }
+
+.resultsfooter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultsfooter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 }
 

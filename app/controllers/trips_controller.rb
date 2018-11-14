@@ -12,8 +12,13 @@ class TripsController < ApplicationController
   def show
     @footer = true
     @trip = Trip.find(params[:id])
+    total_traveller = 0
+    @trip.hometowns.each do |hometown|
+      total_traveller += hometown['number_traveller']
+    end
+    @total_traveller = total_traveller
     # @results = @trip.best_city.first(5)
-    @results = @trip.best_city_extended.first(5)
+    @results = @trip.best_city_extended.first((params[:limit] || 5).to_i)
     @airports = Trip.airport_parse
     @airlines = Trip.airline_parse
     @hometowns = @trip.hometowns.map {|towns| towns.slice('city')}
@@ -58,19 +63,31 @@ class TripsController < ApplicationController
     @trip = Trip.new(name: trip_params[:name])
     @trip.user = current_user
 
-
     if @trip.save
       trip_params[:hometowns].each do |hometown_params|
         next unless hometown_params[1][:city].present?
         # hometown_params = {"city"=>"Paris", "number_traveller"=>"6"}
         hometown_params[1][:number_traveller].to_i
+
         hometown = Hometown.new(hometown_params[1])
         hometown.trip = @trip
-        hometown.save
-        api_url = "https://api.skypicker.com/flights?flyFrom=#{hometown_params[1][:city]}&dateFrom=#{hometown_params[1][:date_from]}&dateTo=#{hometown_params[1][:date_from]}&returnFrom=#{hometown_params[1][:date_to]}&returnTo=#{hometown_params[1][:date_to]}&adults=#{hometown_params[1][:number_traveller].to_i}&locale=en&partner=picky&v=3&xml=0&curr=EUR&price_from=1&max_stopovers=1&limit=200&sort=price&asc=1"
-        json = JSON.parse(open(api_url).read)
-        hometown.update(results: json)
 
+        previous_one = Hometown.search(
+          hometown_params[1][:city],
+          hometown_params[1][:number_traveller],
+          hometown_params[1][:date_from],
+          hometown_params[1][:date_to],
+        )
+
+        if previous_one
+          hometown.results = previous_one.results
+        else
+          api_url = "https://api.skypicker.com/flights?flyFrom=#{hometown_params[1][:city]}&dateFrom=#{hometown_params[1][:date_from]}&dateTo=#{hometown_params[1][:date_from]}&returnFrom=#{hometown_params[1][:date_to]}&returnTo=#{hometown_params[1][:date_to]}&adults=#{hometown_params[1][:number_traveller].to_i}&locale=en&partner=picky&v=3&xml=0&curr=EUR&price_from=1&max_stopovers=1&limit=200&sort=price&asc=1"
+          json = JSON.parse(open(api_url).read)
+          hometown.results = json
+        end
+
+        hometown.save
       end
 
       redirect_to trip_path(@trip)

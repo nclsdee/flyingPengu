@@ -1,4 +1,9 @@
-<h4 style="margin-left: 15px"> These are the best destinations we could find for your trip! </h4>
+<div class="heading">
+<h4 id="showheading"> These are the best destinations we could find for your trip! </h4>
+<span id="tripsummary">
+  <span>Trip name: <%= @trip.name %> </span> <span>Travellers: <%= @total_traveller %></span> <span>Trip dates: <%= @trip.hometowns.first.date_from.strftime("%a. %d. %b.") %> - <%= @trip.hometowns.first.date_to.strftime("%a. %d. %b.") %></span>
+</span>
+</div>
 <div class="show-page">
   <div class="container results">
     <div class="accordion" id="accordionExample">
@@ -78,12 +83,13 @@
     <%end%>
     </div>
     <div class="search-again">
-    <a class="button-flyingpengu" role="button" <%= link_to "Search again", new_trip_path %> </a>
+    <%= link_to "See more results", trip_path(@trip, limit: 15), class: "button-flyingpengu" %>
+    <%= link_to "Search again", new_trip_path, class: "button-flyingpengu" %>
 </div>
   </div>
   </div>
 
-  <div
+    <div
   id="map"
   data-destination="<%= @destinationMarkers.to_json %>"
   data-hometown="<%= @hometownMarkers.to_json %>"
