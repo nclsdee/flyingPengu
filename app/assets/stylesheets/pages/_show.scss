@@ -4,8 +4,17 @@
 
 #map {
   width: 50%;
-  height: 85vh;
+  height: 81vh;
   margin-top: 10px;
+  position: sticky !important;
+  top: 0px;
+}
+
+.resize-map {
+
+  height: 100vh !important;
+  position: sticky;
+  top: 0px;
 }
 
 .resultsfooter {
@@ -21,8 +30,23 @@
     margin-top: 15px;
 }
 
-.email-btn {
+.heading {
+  border-bottom: 1px solid #ededed;
+  max-width: 642px;
+}
 
+#showheading {
+margin-left: 15px;
+}
+
+#tripsummary {
+margin-left: 15px;
+font-weight: lighter;
+display: flex;
+justify-content: space-between;
+span {
+  font-size: 15px;
+}
 }
 
 @media(max-width: 1000px) {
@@ -39,12 +63,24 @@
     width: 100%;
   }
 
+  .email {
+    margin: 20px auto
+  }
+
   #email {
     font-size: 12px;
     height: 40px;
-    width: 145px;
+    width: 200px;
     margin-top: 15px;
 }
+
+.search-again {
+  display: flex;
+  justify-content: space-between;
+  width: 263px;
+  margin: 20px auto;
+}
+
 
 }
 

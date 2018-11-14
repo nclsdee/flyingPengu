@@ -68,35 +68,35 @@ var fuse = new Fuse(airports, options)
 $('.autocomplete').each(function() {
   var ac = $(this);
 
-   ac.on('click', function(e) {
+  ac.on('click', function(e) {
     e.stopPropagation();
   })
   .on('focus keyup', search)
   .on('keydown', onKeyDown);
 
   var wrap = $('<div>')
-    .addClass('autocomplete-wrapper')
-    .insertBefore(ac)
-    .append(ac);
+  .addClass('autocomplete-wrapper')
+  .insertBefore(ac)
+  .append(ac);
 
-    var list = $('<div>')
-      .addClass('autocomplete-results')
-      .on('click', '.autocomplete-result', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        selectIndex($(this).data('index'), ac);
-    })
-    .appendTo(wrap);
+  var list = $('<div>')
+  .addClass('autocomplete-results')
+  .on('click', '.autocomplete-result', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    selectIndex($(this).data('index'), ac);
+  })
+  .appendTo(wrap);
 });
 
 $(document)
-  .on('mouseover', '.autocomplete-result', function(e) {
-    var index = parseInt($(this).data('index'), 10);
-    if (!isNaN(index)) {
-      $(this).attr('data-highlight', index);
-    }
-  })
-  .on('click', clearResults);
+.on('mouseover', '.autocomplete-result', function(e) {
+  var index = parseInt($(this).data('index'), 10);
+  if (!isNaN(index)) {
+    $(this).attr('data-highlight', index);
+  }
+})
+.on('click', clearResults);
 
 function clearResults() {
   results = [];
@@ -126,15 +126,15 @@ function search(e) {
     numResults = results.length;
 
     var divs = results.map(function(r, i) {
-        return '<div class="autocomplete-result" data-index="'+ i +'">'
-             + '<div><b>'+ r.iata +'</b> - '+ r.name +'</div>'
-             + '<div class="autocomplete-location">'+ r.city +', '+ r.country +'</div>'
-             + '</div>';
-     });
+      return '<div class="autocomplete-result" data-index="'+ i +'">'
+      + '<div><b>'+ r.iata +'</b> - '+ r.name +'</div>'
+      + '<div class="autocomplete-location">'+ r.city +', '+ r.country +'</div>'
+      + '</div>';
+    });
 
     selectedIndex = -1;
     list.html(divs.join(''))
-      .attr('data-highlight', selectedIndex);
+    .attr('data-highlight', selectedIndex);
 
   } else {
     numResults = 0;
@@ -147,26 +147,26 @@ function onKeyDown(e) {
   var list = ac.next();
   switch(e.which) {
     case 38: // up
-      selectedIndex--;
-      if (selectedIndex <= -1) {
-        selectedIndex = -1;
-      }
-      list.attr('data-highlight', selectedIndex);
-      break;
+    selectedIndex--;
+    if (selectedIndex <= -1) {
+      selectedIndex = -1;
+    }
+    list.attr('data-highlight', selectedIndex);
+    break;
     case 13: // enter
-      selectIndex(selectedIndex, ac);
-      break;
+    selectIndex(selectedIndex, ac);
+    break;
     case 9: // enter
-      selectIndex(selectedIndex, ac);
-      e.stopPropagation();
-      return;
+    selectIndex(selectedIndex, ac);
+    e.stopPropagation();
+    return;
     case 40: // down
-      selectedIndex++;
-      if (selectedIndex >= numResults) {
-        selectedIndex = numResults-1;
-      }
-      list.attr('data-highlight', selectedIndex);
-      break;
+    selectedIndex++;
+    if (selectedIndex >= numResults) {
+      selectedIndex = numResults-1;
+    }
+    list.attr('data-highlight', selectedIndex);
+    break;
 
     default: return; // exit this handler for other keys
   }
@@ -175,7 +175,23 @@ function onKeyDown(e) {
 }
 
 
+// map scroll
 
+
+
+$( document ).ready(function() {
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    console.log(scroll);
+    const mapdiv = document.querySelector("#map");
+    if ((scroll >= 26 && mapdiv)) {
+      console.log("map is present")
+      $("#map").switchClass(" ","resize-map",500,"easeInOutQuad" );
+    } else {
+      $("#map").switchClass("resize-map"," ",500,"easeInOutQuad");
+    }
+  });
+});
 
 
 

@@ -4466,7 +4466,7 @@
 "BFS": {
 "name": "Belfast International Airport",
 "city": "Belfast",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BFS",
 "icao": "EGAA",
 "latitude": "54.6575012207",
@@ -4478,7 +4478,7 @@
 "ENK": {
 "name": "St Angelo Airport",
 "city": "Enniskillen",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ENK",
 "icao": "EGAB",
 "latitude": "54.39889907836914",
@@ -4490,7 +4490,7 @@
 "BHD": {
 "name": "George Best Belfast City Airport",
 "city": "Belfast",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BHD",
 "icao": "EGAC",
 "latitude": "54.618099212646484",
@@ -4502,7 +4502,7 @@
 "LDY": {
 "name": "City of Derry Airport",
 "city": "Londonderry",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LDY",
 "icao": "EGAE",
 "latitude": "55.04280090332031",
@@ -4514,7 +4514,7 @@
 "BHX": {
 "name": "Birmingham International Airport",
 "city": "Birmingham",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BHX",
 "icao": "EGBB",
 "latitude": "52.453899383499994",
@@ -4526,7 +4526,7 @@
 "CVT": {
 "name": "Coventry Airport",
 "city": "Coventry",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CVT",
 "icao": "EGBE",
 "latitude": "52.3697013855",
@@ -4538,7 +4538,7 @@
 "GLO": {
 "name": "Gloucestershire Airport",
 "city": "Golouchestershire",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "GLO",
 "icao": "EGBJ",
 "latitude": "51.89419937133789",
@@ -4550,7 +4550,7 @@
 "MAN": {
 "name": "Manchester Airport",
 "city": "Manchester",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "MAN",
 "icao": "EGCC",
 "latitude": "53.35369873046875",
@@ -4562,7 +4562,7 @@
 "NQY": {
 "name": "Newquay Cornwall Airport",
 "city": "Newquai",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NQY",
 "icao": "EGHQ",
 "latitude": "50.44060134887695",
@@ -4574,7 +4574,7 @@
 "LYE": {
 "name": "RAF Lyneham",
 "city": "Lyneham",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LYE",
 "icao": "EGDL",
 "latitude": "51.5051",
@@ -4586,7 +4586,7 @@
 "YEO": {
 "name": "RNAS Yeovilton",
 "city": "Yeovilton",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "YEO",
 "icao": "EGDY",
 "latitude": "51.0093994140625",
@@ -4598,7 +4598,7 @@
 "CWL": {
 "name": "Cardiff International Airport",
 "city": "Cardiff",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CWL",
 "icao": "EGFF",
 "latitude": "51.39670181274414",
@@ -4610,7 +4610,7 @@
 "SWS": {
 "name": "Swansea Airport",
 "city": "Swansea",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "SWS",
 "icao": "EGFH",
 "latitude": "51.60530090332031",
@@ -4622,7 +4622,7 @@
 "BRS": {
 "name": "Bristol Airport",
 "city": "Bristol",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BRS",
 "icao": "EGGD",
 "latitude": "51.382702",
@@ -4634,7 +4634,7 @@
 "LPL": {
 "name": "Liverpool John Lennon Airport",
 "city": "Liverpool",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LPL",
 "icao": "EGGP",
 "latitude": "53.33359909057617",
@@ -4646,7 +4646,7 @@
 "LTN": {
 "name": "London Luton Airport",
 "city": "London",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LTN",
 "icao": "EGGW",
 "latitude": "51.874698638916016",
@@ -4658,7 +4658,7 @@
 "PLH": {
 "name": "Plymouth City Airport",
 "city": "Plymouth",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "PLH",
 "icao": "EGHD",
 "latitude": "50.422798",
@@ -4670,7 +4670,7 @@
 "BOH": {
 "name": "Bournemouth Airport",
 "city": "Bournemouth",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BOH",
 "icao": "EGHH",
 "latitude": "50.779998779296875",
@@ -4682,7 +4682,7 @@
 "SOU": {
 "name": "Southampton Airport",
 "city": "Southampton",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "SOU",
 "icao": "EGHI",
 "latitude": "50.95029830932617",
@@ -4694,7 +4694,7 @@
 "QLA": {
 "name": "Lasham Airport",
 "city": "Lasham",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "QLA",
 "icao": "EGHL",
 "latitude": "51.187198638916016",
@@ -4742,7 +4742,7 @@
 "ESH": {
 "name": "Shoreham Airport",
 "city": "Shoreham By Sea",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ESH",
 "icao": "EGKA",
 "latitude": "50.835601806640625",
@@ -4754,7 +4754,7 @@
 "BQH": {
 "name": "London Biggin Hill Airport",
 "city": "Biggin Hill",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BQH",
 "icao": "EGKB",
 "latitude": "51.33079910279999",
@@ -4766,7 +4766,7 @@
 "LGW": {
 "name": "London Gatwick Airport",
 "city": "London",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LGW",
 "icao": "EGKK",
 "latitude": "51.148101806640625",
@@ -4778,7 +4778,7 @@
 "LCY": {
 "name": "London City Airport",
 "city": "London",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LCY",
 "icao": "EGLC",
 "latitude": "51.505299",
@@ -4790,7 +4790,7 @@
 "FAB": {
 "name": "Farnborough Airport",
 "city": "Farnborough",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "FAB",
 "icao": "EGLF",
 "latitude": "51.2757987976",
@@ -4802,7 +4802,7 @@
 "BBS": {
 "name": "Blackbushe Airport",
 "city": "Blackbushe",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BBS",
 "icao": "EGLK",
 "latitude": "51.32389831542969",
@@ -4814,7 +4814,7 @@
 "LHR": {
 "name": "London Heathrow Airport",
 "city": "London",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LHR",
 "icao": "EGLL",
 "latitude": "51.4706",
@@ -4826,7 +4826,7 @@
 "SEN": {
 "name": "Southend Airport",
 "city": "Southend",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "SEN",
 "icao": "EGMC",
 "latitude": "51.5713996887207",
@@ -4838,7 +4838,7 @@
 "LYX": {
 "name": "Lydd Airport",
 "city": "Lydd",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LYX",
 "icao": "EGMD",
 "latitude": "50.95610046386719",
@@ -4850,7 +4850,7 @@
 "MSE": {
 "name": "Kent International Airport",
 "city": "Manston",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "MSE",
 "icao": "EGMH",
 "latitude": "51.342201",
@@ -4862,7 +4862,7 @@
 "CAX": {
 "name": "Carlisle Airport",
 "city": "Carlisle",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CAX",
 "icao": "EGNC",
 "latitude": "54.9375",
@@ -4874,7 +4874,7 @@
 "BLK": {
 "name": "Blackpool International Airport",
 "city": "Blackpool",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BLK",
 "icao": "EGNH",
 "latitude": "53.77170181274414",
@@ -4886,7 +4886,7 @@
 "HUY": {
 "name": "Humberside Airport",
 "city": "Humberside",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "HUY",
 "icao": "EGNJ",
 "latitude": "53.57440185546875",
@@ -4898,7 +4898,7 @@
 "BWF": {
 "name": "Barrow Walney Island Airport",
 "city": "Barrow Island",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BWF",
 "icao": "EGNL",
 "latitude": "54.1286111",
@@ -4910,7 +4910,7 @@
 "LBA": {
 "name": "Leeds Bradford Airport",
 "city": "Leeds",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LBA",
 "icao": "EGNM",
 "latitude": "53.86589813232422",
@@ -4922,7 +4922,7 @@
 "CEG": {
 "name": "Hawarden Airport",
 "city": "Hawarden",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CEG",
 "icao": "EGNR",
 "latitude": "53.1781005859375",
@@ -4946,7 +4946,7 @@
 "NCL": {
 "name": "Newcastle Airport",
 "city": "Newcastle",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NCL",
 "icao": "EGNT",
 "latitude": "55.037498474121094",
@@ -4958,7 +4958,7 @@
 "MME": {
 "name": "Durham Tees Valley Airport",
 "city": "Teesside",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "MME",
 "icao": "EGNV",
 "latitude": "54.50920104980469",
@@ -4970,7 +4970,7 @@
 "EMA": {
 "name": "East Midlands Airport",
 "city": "East Midlands",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "EMA",
 "icao": "EGNX",
 "latitude": "52.8311004639",
@@ -4982,7 +4982,7 @@
 "KOI": {
 "name": "Kirkwall Airport",
 "city": "Kirkwall",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "KOI",
 "icao": "EGPA",
 "latitude": "58.957801818847656",
@@ -4994,7 +4994,7 @@
 "LSI": {
 "name": "Sumburgh Airport",
 "city": "Sumburgh",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LSI",
 "icao": "EGPB",
 "latitude": "59.87889862060547",
@@ -5006,7 +5006,7 @@
 "WIC": {
 "name": "Wick Airport",
 "city": "Wick",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "WIC",
 "icao": "EGPC",
 "latitude": "58.458900451660156",
@@ -5018,7 +5018,7 @@
 "ABZ": {
 "name": "Aberdeen Dyce Airport",
 "city": "Aberdeen",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ABZ",
 "icao": "EGPD",
 "latitude": "57.201900482177734",
@@ -5030,7 +5030,7 @@
 "INV": {
 "name": "Inverness Airport",
 "city": "Inverness",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "INV",
 "icao": "EGPE",
 "latitude": "57.54249954223633",
@@ -5042,7 +5042,7 @@
 "GLA": {
 "name": "Glasgow International Airport",
 "city": "Glasgow",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "GLA",
 "icao": "EGPF",
 "latitude": "55.8718986511",
@@ -5054,7 +5054,7 @@
 "EDI": {
 "name": "Edinburgh Airport",
 "city": "Edinburgh",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "EDI",
 "icao": "EGPH",
 "latitude": "55.95000076293945",
@@ -5066,7 +5066,7 @@
 "ILY": {
 "name": "Islay Airport",
 "city": "Islay",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ILY",
 "icao": "EGPI",
 "latitude": "55.68190002441406",
@@ -5078,7 +5078,7 @@
 "PIK": {
 "name": "Glasgow Prestwick Airport",
 "city": "Prestwick",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "PIK",
 "icao": "EGPK",
 "latitude": "55.5093994140625",
@@ -5090,7 +5090,7 @@
 "BEB": {
 "name": "Benbecula Airport",
 "city": "Benbecula",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BEB",
 "icao": "EGPL",
 "latitude": "57.48109817504883",
@@ -5102,7 +5102,7 @@
 "SCS": {
 "name": "Scatsta Airport",
 "city": "Scatsta",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "SCS",
 "icao": "EGPM",
 "latitude": "60.43280029296875",
@@ -5114,7 +5114,7 @@
 "DND": {
 "name": "Dundee Airport",
 "city": "Dundee",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "DND",
 "icao": "EGPN",
 "latitude": "56.45249938964844",
@@ -5126,7 +5126,7 @@
 "SYY": {
 "name": "Stornoway Airport",
 "city": "Stornoway",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "SYY",
 "icao": "EGPO",
 "latitude": "58.215599060058594",
@@ -5138,7 +5138,7 @@
 "TRE": {
 "name": "Tiree Airport",
 "city": "Tiree",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "TRE",
 "icao": "EGPU",
 "latitude": "56.49919891357422",
@@ -5150,7 +5150,7 @@
 "ADX": {
 "name": "RAF Leuchars",
 "city": "Leuchars",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ADX",
 "icao": "EGQL",
 "latitude": "56.37289810180664",
@@ -5162,7 +5162,7 @@
 "LMO": {
 "name": "RAF Lossiemouth",
 "city": "Lossiemouth",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LMO",
 "icao": "EGQS",
 "latitude": "57.7052001953125",
@@ -5174,7 +5174,7 @@
 "CBG": {
 "name": "Cambridge Airport",
 "city": "Cambridge",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CBG",
 "icao": "EGSC",
 "latitude": "52.2050018311",
@@ -5186,7 +5186,7 @@
 "NWI": {
 "name": "Norwich International Airport",
 "city": "Norwich",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NWI",
 "icao": "EGSH",
 "latitude": "52.6758003235",
@@ -5198,7 +5198,7 @@
 "STN": {
 "name": "London Stansted Airport",
 "city": "London",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "STN",
 "icao": "EGSS",
 "latitude": "51.8849983215",
@@ -5210,7 +5210,7 @@
 "EXT": {
 "name": "Exeter International Airport",
 "city": "Exeter",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "EXT",
 "icao": "EGTE",
 "latitude": "50.73440170288086",
@@ -5222,7 +5222,7 @@
 "FZO": {
 "name": "Bristol Filton Airport",
 "city": "Bristol",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "FZO",
 "icao": "EGTG",
 "latitude": "51.5194015503",
@@ -5234,7 +5234,7 @@
 "OXF": {
 "name": "Oxford (Kidlington) Airport",
 "city": "Oxford",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "OXF",
 "icao": "EGTK",
 "latitude": "51.8368988037",
@@ -5246,7 +5246,7 @@
 "MHZ": {
 "name": "RAF Mildenhall",
 "city": "Mildenhall",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "MHZ",
 "icao": "EGUN",
 "latitude": "52.361900329589844",
@@ -5258,7 +5258,7 @@
 "FFD": {
 "name": "RAF Fairford",
 "city": "Fairford",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "FFD",
 "icao": "EGVA",
 "latitude": "51.6822013855",
@@ -5270,7 +5270,7 @@
 "BZZ": {
 "name": "RAF Brize Norton",
 "city": "Brize Norton",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BZZ",
 "icao": "EGVN",
 "latitude": "51.75",
@@ -5282,7 +5282,7 @@
 "ODH": {
 "name": "RAF Odiham",
 "city": "Odiham",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ODH",
 "icao": "EGVO",
 "latitude": "51.2341003418",
@@ -5294,7 +5294,7 @@
 "NHT": {
 "name": "RAF Northolt",
 "city": "Northolt",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NHT",
 "icao": "EGWU",
 "latitude": "51.553001403799996",
@@ -5306,7 +5306,7 @@
 "QCY": {
 "name": "RAF Coningsby",
 "city": "Coningsby",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "QCY",
 "icao": "EGXC",
 "latitude": "53.0929985046",
@@ -5318,7 +5318,7 @@
 "BEQ": {
 "name": "RAF Honington",
 "city": "Honington",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BEQ",
 "icao": "EGXH",
 "latitude": "52.34260177612305",
@@ -5330,7 +5330,7 @@
 "HRT": {
 "name": "RAF Linton-On-Ouse",
 "city": "Linton-on-ouse",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "HRT",
 "icao": "EGXU",
 "latitude": "54.0489006042",
@@ -5342,7 +5342,7 @@
 "WTN": {
 "name": "RAF Waddington",
 "city": "Waddington",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "WTN",
 "icao": "EGXW",
 "latitude": "53.1661987305",
@@ -5354,7 +5354,7 @@
 "KNF": {
 "name": "RAF Marham",
 "city": "Marham",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "KNF",
 "icao": "EGYM",
 "latitude": "52.648395",
@@ -38258,7 +38258,7 @@
 "ISC": {
 "name": "St. Mary's Airport",
 "city": "ST MARY\\\\'S",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "ISC",
 "icao": "EGHE",
 "latitude": "49.913299560546875",
@@ -40502,7 +40502,7 @@
 "NQT": {
 "name": "Nottingham Airport",
 "city": "Nottingham",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NQT",
 "icao": "EGBN",
 "latitude": "52.91999816894531",
@@ -40514,7 +40514,7 @@
 "DSA": {
 "name": "Robin Hood Doncaster Sheffield Airport",
 "city": "Doncaster, Sheffield",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "DSA",
 "icao": "EGCN",
 "latitude": "53.4805378105",
@@ -40526,7 +40526,7 @@
 "CAL": {
 "name": "Campbeltown Airport",
 "city": "Campbeltown",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CAL",
 "icao": "EGEC",
 "latitude": "55.437198638916016",
@@ -40538,7 +40538,7 @@
 "EOI": {
 "name": "Eday Airport",
 "city": "Eday",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "EOI",
 "icao": "EGED",
 "latitude": "59.19060134887695",
@@ -40550,7 +40550,7 @@
 "FIE": {
 "name": "Fair Isle Airport",
 "city": "Fair Isle",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "FIE",
 "icao": "EGEF",
 "latitude": "59.53580093383789",
@@ -40562,7 +40562,7 @@
 "NRL": {
 "name": "North Ronaldsay Airport",
 "city": "North Ronaldsay",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NRL",
 "icao": "EGEN",
 "latitude": "59.3675003052",
@@ -40574,7 +40574,7 @@
 "PPW": {
 "name": "Papa Westray Airport",
 "city": "Papa Westray",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "PPW",
 "icao": "EGEP",
 "latitude": "59.351699829100006",
@@ -40586,7 +40586,7 @@
 "SOY": {
 "name": "Stronsay Airport",
 "city": "Stronsay",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "SOY",
 "icao": "EGER",
 "latitude": "59.1553001404",
@@ -40598,7 +40598,7 @@
 "NDY": {
 "name": "Sanday Airport",
 "city": "Sanday",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "NDY",
 "icao": "EGES",
 "latitude": "59.250301361083984",
@@ -40610,7 +40610,7 @@
 "LWK": {
 "name": "Lerwick / Tingwall Airport",
 "city": "Lerwick",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LWK",
 "icao": "EGET",
 "latitude": "60.192199707",
@@ -40622,7 +40622,7 @@
 "WRY": {
 "name": "Westray Airport",
 "city": "Westray",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "WRY",
 "icao": "EGEW",
 "latitude": "59.3502998352",
@@ -40634,7 +40634,7 @@
 "LEQ": {
 "name": "Land's End Airport",
 "city": "Land's End",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LEQ",
 "icao": "EGHC",
 "latitude": "50.10279846191406",
@@ -40646,7 +40646,7 @@
 "PZE": {
 "name": "Penzance Heliport",
 "city": "Penzance",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "PZE",
 "icao": "EGHK",
 "latitude": "50.128101",
@@ -40658,7 +40658,7 @@
 "VLY": {
 "name": "Anglesey Airport",
 "city": "Angelsey",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "VLY",
 "icao": "EGOV",
 "latitude": "53.2481002808",
@@ -40670,7 +40670,7 @@
 "BRR": {
 "name": "Barra Airport",
 "city": "Barra",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BRR",
 "icao": "EGPR",
 "latitude": "57.02280044555664",
@@ -49958,7 +49958,7 @@
 "UNT": {
 "name": "Unst Airport",
 "city": "Unst",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "UNT",
 "icao": "EGPW",
 "latitude": "60.74720001220703",
@@ -50030,7 +50030,7 @@
 "OBN": {
 "name": "Oban Airport",
 "city": "North Connel",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "OBN",
 "icao": "EGEO",
 "latitude": "56.4635009765625",
@@ -51506,7 +51506,7 @@
 "LYM": {
 "name": "Lympne Airport",
 "city": "Lympne",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LYM",
 "icao": "EGMK",
 "latitude": "51.08",
@@ -55274,7 +55274,7 @@
 "CSA": {
 "name": "Colonsay Airstrip",
 "city": "Colonsay",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "CSA",
 "icao": "EGEY",
 "latitude": "56.0574989319",
@@ -55322,7 +55322,7 @@
 "TSO": {
 "name": "Tresco Heliport",
 "city": "Tresco",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "TSO",
 "icao": "EGHT",
 "latitude": "49.94559860229492",
@@ -56882,7 +56882,7 @@
 "BBP": {
 "name": "Bembridge Airport",
 "city": "Bembridge",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "BBP",
 "icao": "EGHJ",
 "latitude": "50.6781005859",
@@ -60386,7 +60386,7 @@
 "PSL": {
 "name": "Perth/Scone Airport",
 "city": "Perth",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "PSL",
 "icao": "EGPT",
 "latitude": "56.43920135498047",
@@ -60914,7 +60914,7 @@
 "QFO": {
 "name": "Duxford Airport",
 "city": "Duxford",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "QFO",
 "icao": "EGSU",
 "latitude": "52.090801239",
@@ -61250,7 +61250,7 @@
 "RCS": {
 "name": "Rochester Airport",
 "city": "Rochester",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "RCS",
 "icao": "EGTO",
 "latitude": "51.351898193359375",
@@ -61502,7 +61502,7 @@
 "KRH": {
 "name": "Redhill Aerodrome",
 "city": "Redhill",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "KRH",
 "icao": "EGKR",
 "latitude": "51.2136001587",
@@ -65894,7 +65894,7 @@
 "FSS": {
 "name": "RAF Kinloss",
 "city": "Kinloss",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "FSS",
 "icao": "EGQK",
 "latitude": "57.6493988037",
@@ -67866,7 +67866,7 @@
 "LON": {
 "name": "All Airports",
 "city": "London",
-"country": "United Kingdom",
+"country": "UK",
 "iata": "LON",
 "latitude": "51.509865",
 "longitude": "-0.118092"
