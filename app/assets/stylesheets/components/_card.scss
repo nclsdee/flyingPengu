@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.card:hover {
+  background-color: #e5e5e5;
+  box-shadow: 2px 2px 6px rgba(212,212,212,0.59);
+}
+
 
 .card-description {
 
@@ -37,18 +42,24 @@
   position: relative;
 }
 
-.card-body {
+div#flightcard {
   background-color: white;
 }
 
 .trip-details {
 margin-left: 5px;
 h5 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 h6 {
   font-size: 16px;
+}
+
+span {
+  display: flex;
+  align-items: flex-end
 }
 
 }
@@ -62,8 +73,149 @@ bottom: 0px;
 right: 5px;
 }
 
+
 .flights {
   padding: 5px 10px;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.flight-general {
+  display: flex;
+  justify-content: space-around;
+  min-width: 150px;
+  span {
+  display: flex;
+  align-items: center;
+  }
+
+  h5 {
+  font-size: 16px;
+  font-weight: bold;
+  }
+
+  h4 {
+    font-weight: bold;
+    color: #33a3a5;
+    font-size: 16px;
+  }
+  flex: 1 0 25%;
+
+}
+
+.flightdetails {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  max-width: 500px;
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+  h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  flex: 1 1 70%;
+}
+
+.book-now-button {
+  flex: 0 0 15%;
+  min-width: 95px;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.search-again {
+  margin-top: 20px;
+}
+
+.outbound {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.return {
+  margin-bottom: 10px;
+}
+
+#flight-price {
+  display: flex;
+  justify-content: space-between;
+  min-width: 270px;
+}
+
+#price {
+    font-weight: bold;
+    color: #33a3a5;
+    font-size: 22px;
+}
+
+@media(max-width: 1000px) {
+  .flight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0px;
+
+}
+
+.flight-general {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  span {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+  }
+  h5 {
+  font-size: 16px;
+  font-weight: bold;
+  }
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ededed;
+}
+
+
+.flightdetails {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 95%
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+  h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  flex: 1 1 60%;
+}
+
+.book-now-button {
+  flex: 0 0 15%;
+  flex-shrink: 0;
+  margin: 20px 0px;
+  align-self: flex-end;
+
+}
+
 }
 
