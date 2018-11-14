@@ -51,8 +51,10 @@ class TripsController < ApplicationController
     @trip = Trip.find(params["trip_id"].to_i)
     @path = trip_path(@trip)
     @email = params["email"]
-    UserMailer.share(@email, @trip, @path).deliver
+    if UserMailer.share(@email, @trip, @path).deliver
+    flash[:notice] = "You've successfully shared your itinerary!"
     redirect_to(@path)
+  end
   end
 
   def new
