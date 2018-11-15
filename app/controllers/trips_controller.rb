@@ -51,8 +51,12 @@ class TripsController < ApplicationController
     @trip = Trip.find(params["trip_id"].to_i)
     @path = trip_path(@trip)
     @email = params["email"]
-    UserMailer.share(@email, @trip, @path).deliver
+    if UserMailer.share(@email, @trip, @path).deliver
+    flash[:notice] = "You've successfully shared your itinerary!"
     redirect_to(@path)
+    else
+    redirect_to(@path)
+  end
   end
 
   def new
@@ -60,13 +64,23 @@ class TripsController < ApplicationController
   end
 
   def create
+    valid_cities = trip_params[:hometowns].select {|_, hometown|
+      hometown[:city].present? &&\
+      hometown[:number_traveller].present? &&\
+      hometown[:date_from].present? &&\
+      hometown[:date_to].present?
+    }
+
+    if valid_cities.keys.size < 2
+      return redirect_to new_trip_path
+    end
+
     @trip = Trip.new(name: trip_params[:name])
     @trip.user = current_user
 
     if @trip.save
-      trip_params[:hometowns].each do |hometown_params|
-        next unless hometown_params[1][:city].present?
-        # hometown_params = {"city"=>"Paris", "number_traveller"=>"6"}
+      valid_cities.each do |hometown_params|
+        # hometown_params[1] = {"city"=>"Paris", "number_traveller"=>"6"}
         hometown_params[1][:number_traveller].to_i
 
         hometown = Hometown.new(hometown_params[1])
