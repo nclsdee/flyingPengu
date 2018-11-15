@@ -2,12 +2,14 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="penguin-svg text-center" style="display: flex;" >
-        <%= image_tag("penguin.png") %>
+        <%= image_tag("penguin(2).svg") %>
         <h3 class="text-center title" style="margin-top: 5%">
           Hey You! <br>
           Welcome to your <span>Penguin</span> Research!</h3>
       </div>
+      <br>
       <h4 class="text-center tagline">Please enter your trip name and the hometown airports you and your friends are leaving from:</h4>
+
       <%= simple_form_for @trip do |f| %>
         <%= f.error_notification %>
         <%= f.input :name, id: "trip-name", label: "", placeholder: "Type trip name here!" %>
@@ -37,7 +39,7 @@
         <% end %>
         <div style="display: flex;justify-content: space-between;margin-top:4%;">
           <div class="btn-one" style="display: flex;">
-            <div class="btn-primary buttons" id="remove-extra-field" style="border-right: 2px white solid">-</div>
+            <div class="btn-primary buttons" id="remove-extra-field" style="border-right: 2px white solid" >–</div>
             <div class="btn-primary buttons" id="add-extra-field" style="border-left: 2px white solid">+</div>
           </div>
         </div>
