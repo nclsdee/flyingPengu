@@ -26,7 +26,15 @@ body {
 
 
 // Airport Autocomplete
+.ui-autocomplete {
 
+    position: absolute;
+ top: 0;
+ left: 0;
+
+    cursor: default;
+    z-index: 9050!important;
+}
 
 
 .autocomplete-wrapper {
@@ -36,7 +44,7 @@ body {
   }
 }
 .autocomplete-results {
-  position: relative;
+  position: absolute;
   background: white;
   z-index: 999;
   top: 100%;
@@ -47,7 +55,7 @@ body {
   border-bottom-color: #ccc;
   box-shadow:
     0 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
+    border-radius: 2px;
 }
 
 .autocomplete-result {
