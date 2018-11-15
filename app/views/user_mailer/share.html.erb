@@ -1,18 +1,23 @@
-<h1>User#share</h1>
+<h1>FlyingPengu</h1>
 
 <p>
-<%= p "this is the link" %>
+  <%= p "The trip " %><%= p @trip.name %><%= p " is being shared with you." %>
+  <%= p "To check the group details of the flight" %>
+  <%= p "click here:" %>
   <%= p "http://www.flyingpengu.com" + @path %>
 
-  <%= p "this is the trips name" %>
-  <%= p @trip.name %>
 
+  Your Friend has shared the flight details.
+  Enjoy your journey with friends.
+
+  On behave of the amazing team at FlyingPengu.com,
+
+  we wish you a pleasant trip.
+
+
+  For more info about FlyingPengu,
+  we can be reached at contact@flyingpengu.com. We will reply as soon as possible.
+
+  Thank you for being part of our community,
   <%= p @email %>
-
-
-  <%#= @url %>,
-
-  Your Friend is sharing the search details of the group trip
-
-  <!-- find me in app/views/user_mailer/share.html.erb -->
 </p>
