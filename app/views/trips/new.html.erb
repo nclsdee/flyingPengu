@@ -19,16 +19,16 @@
               <div class="col-md-6">
                 <%= ff.input :city, input_html: { autocomplete: 'off', name: "trip[hometowns][#{i}][city]", class: "autocomplete city_field", placeholder: "Hometown airport" } %>
               </div>
-              <div class="col-md-2" style="display: flex;">
+              <div class="col-md-2 datewidth" style="display: flex;">
                 <%= ff.input :date_from, as: :string, required: false,
           input_html: {name: "trip[hometowns][#{i}][date_from]", id: "start_date#{i}", class: "js-date-from" } %>
               </div>
               <div class="col-md-2">
                 <%= ff.input :date_to, as: :string, required: false, input_html: {name: "trip[hometowns][#{i}][date_to]", id: "end_date#{i}", class: "js-date-to"} %>
               </div>
-              <div class="col-md-2">
+              <div class="col-md-2 adults">
                 <%= ff.input :Adults, input_html: { type: "hidden", name: "trip[hometowns][#{i}][number_traveller]", class: "js-input"} %>
-                <div>
+                <div id="adultspicker">
                   <button type="button" class="js-minus buttons">-</button>
                   <a class="js-counter">0</a>
                   <button type="button" class="js-plus buttons">+</button>
