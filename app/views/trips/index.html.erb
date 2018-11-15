@@ -26,9 +26,8 @@
          </div>
          <!-- Post Content-->
          <div class="post-content">
-           <div class="category">Photo</div>
+           <div class="category">Details</div>
            <h1 class="title"><%= trip.name %></h1>
-
            <% trip.hometowns.each do |hometown| %>
            <h2 class="sub_title">Hometown airport: <%= hometown.city  %></h2>
            <p class="description">Travelers: <%= hometown.number_traveller  %></p>
@@ -36,8 +35,9 @@
             <span class="timestamp"><i class="fa fa-plane"></i>From: <%= hometown.date_from  %></span>
             <span class="comments"><i class="fa fa-send"></i><a href="#">To: <%= hometown.date_to  %></a></span>
           </div>
+          <br>
           <% end %>
-       <%= link_to "Delete trip", trip_path(trip), method: :delete, data: { confirm: "Are you sure you want to delete this trip?" } %>
+       <%= link_to '<i class="fa fa-trash"></i>'.html_safe, trip_path(trip), method: :delete, data: { confirm: "Are you sure you want to delete this trip?" } %>
         </div>
         <% end %>
       </div>
