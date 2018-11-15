@@ -118,6 +118,25 @@ $(".js-minus").click(function() {
 
 
 $("#add-extra-field").click(function () {
+
+  var att_start = document.createAttribute("value");       // Create a "class" attribute
+  att_start.value = document.querySelector("#start_date0").value;
+  var st = $(".hometown:hidden")[0].querySelectorAll(".col-md-2 > .string > .flatpickr-input")[0]
+  $(".hometown:hidden")[0].querySelectorAll(".col-md-2 > .string > .flatpickr-input")[1].value = att_start.value
+
+  st.setAttributeNode(att_start);
+
+  var att_end = document.createAttribute("value");       // Create a "class" attribute
+  att_end.value = document.querySelector("#end_date0").value;
+  var en = $(".hometown:hidden")[0].querySelectorAll(".col-md-2 > .string > .flatpickr-input")[2]
+  $(".hometown:hidden")[0].querySelectorAll(".col-md-2 > .string > .flatpickr-input")[3].value = att_end.value
+  en.setAttributeNode(att_end);
+
+  // var start_date = document.querySelector("#start_date0").value
+  // var end_date = document.querySelector("#end_date0").value
+
+  // $(".hometown:hidden")[0].querySelectorAll(".col-md-2 > .string > .flatpickr-input")[3].value = end_date
+
   $(".hometown:hidden").first().show();
 });
 
@@ -209,6 +228,11 @@ $(".js-open-wait").click(function() {
 
 
 });
+
+
+
+
+
 
 
 
