@@ -93,38 +93,34 @@ const styles = [
 ];
 
 
-const mapElement = document.getElementById('map');
-if (mapElement) { // don't try to build a map if there's no div#map to inject in
-  const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
-const markersDestination = JSON.parse(mapElement.dataset.destination);
-const markersHometown = JSON.parse(mapElement.dataset.hometown);
+
+$( document ).ready(function() {
+  const mapElement = document.getElementById('map');
+  if (mapElement) { // don't try to build a map if there's no div#map to inject in
+    const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
+  const markersDestination = JSON.parse(mapElement.dataset.destination);
+  const markersHometown = JSON.parse(mapElement.dataset.hometown);
 
 
 
-console.log(mapElement.dataset);
-
-map.addMarkers(markersDestination);
-map.addMarkers(markersHometown);
+  map.addMarkers(markersDestination);
+  map.addMarkers(markersHometown);
 
 
-if (markersDestination.length === 0) {
-  map.setZoom(2);
-} else if (markersDestination.length === 1) {
-  map.setCenter(markersDestination[0].lat, markersDestination[0].lng);
-  map.setZoom(14);
-} else {
-  map.fitLatLngBounds(markersDestination);
-}
+  if (markersDestination.length === 0) {
+    map.setZoom(2);
+  } else if (markersDestination.length === 1) {
+    map.setCenter(markersDestination[0].lat, markersDestination[0].lng);
+    map.setZoom(14);
+  } else {
+    map.fitLatLngBounds(markersDestination);
+  }
 
-map.addStyle({
-  styles: styles,
-  mapTypeId: 'map_style'
+  map.addStyle({
+    styles: styles,
+    mapTypeId: 'map_style'
+  });
+  map.setStyle('map_style');
+  }
+
 });
-map.setStyle('map_style');
-}
-
-
-
-
-
-

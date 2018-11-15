@@ -1,9 +1,9 @@
- <div class="wrapper">
+ <div class="wrapper" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.6) 0%, rgba(140,140,140,0.6) 50%), url('https://images.pexels.com/photos/59519/pexels-photo-59519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
 
 
   <div class="cover">
     <h1>We travel better together</h1>
-    <h1>Discover what's out there with your friends</h1>
+    <h2>Discover what's out there with your friends</h2>
 
   <% if user_signed_in? %>
   <form  class="flex-form" action="/trips/new" >
@@ -14,6 +14,8 @@
       <input type="submit" value="Start your journey here" >
     </form>
   <%end %>
+
+  <h3>FlyingPengu allows you to find the cheapest flight destination - for you and all your friends</h3>
 
   </div>
 

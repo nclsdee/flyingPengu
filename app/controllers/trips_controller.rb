@@ -54,6 +54,8 @@ class TripsController < ApplicationController
     if UserMailer.share(@email, @trip, @path).deliver
     flash[:notice] = "You've successfully shared your itinerary!"
     redirect_to(@path)
+    else
+    redirect_to(@path)
   end
   end
 
