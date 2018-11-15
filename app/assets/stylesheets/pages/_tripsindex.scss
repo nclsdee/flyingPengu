@@ -192,7 +192,9 @@
     padding-right: 80px;
 }
 
-
+a:hover, a:focus {
+  text-decoration: none;
+}
 
 /* .savedtrips {
   h1 {
