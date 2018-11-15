@@ -10,6 +10,7 @@ $(document).ready(function() {
     dateCacheEnd[index] = flatpickr(element, {
       minDate: "today",
       showAlways: false,
+      disableMobile: true,
       locale: {
           firstDayOfWeek: 1
       },
@@ -31,6 +32,7 @@ $(document).ready(function() {
           firstDayOfWeek: 1
       },
       showAlways: false,
+      disableMobile: true,
       theme: 'airbnb',
       dateFormat: 'd/m/Y',
       weekNumbers: false,
