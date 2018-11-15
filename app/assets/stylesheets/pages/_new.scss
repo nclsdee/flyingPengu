@@ -12,7 +12,17 @@
 }
 
 .buttons {
-
+  min-width: 4rem;
+  color: white;
+  background:#53c9cc;
+  border: 2px #53c9cc solid;
+  border-radius:2px;
+  font-size: 1.5em;
+  &:hover{
+    border: 2px #53c9cc solid;
+    color: white;
+    background: #53c9cc;
+  }
 }
 
 .date_from {
@@ -23,3 +33,42 @@
 
 }
 
+.trip_hometowns_Adults {
+  margin-bottom: -4% !important;
+}
+
+abbr {
+  display: none;
+}
+
+input:focus {
+
+}
+
+#trip_name {
+  border: 1px solid #69d9dd;
+  widows: 100%
+}
+
+.far {
+  background-color: #69d9dd;
+  color: white;
+  border-radius: 2px;
+}
+
+.penguin-svg img {
+  margin-top:2%;
+}
+
+.title {
+  opacity:.9;
+  letter-spacing: 2px;
+  span {
+    color: #69d9dd;
+  }
+}
+
+.tagline {
+  opacity:.7;
+  letter-spacing: 2px;
+}

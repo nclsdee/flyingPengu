@@ -4,8 +4,8 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-sprockets";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -20,6 +20,7 @@
 
 body {
   overflow-y: scroll;
+  padding-bottom: 100px;
 }
 
 
@@ -66,14 +67,10 @@ body {
 }
 
 .form-control {
-  border-radius: 24px;
+  border-radius: 3px;
 }
 
-.fas {
-  background-color: #69d9dd;
-  color: white;
-  border-radius: 21px;
-}
+
 
 .js-open-wait {
   width: 100%;
@@ -91,4 +88,11 @@ $iPlus: 0;
     border-bottom-color: #26C9FF;
     outline: solid 1px darken(#26C9FF, 10%);
   }
+}
+
+// image
+input[type='hidden'] {
+    background-image: url(https://image.ibb.co/fZhCPf/calendar.png);
+    background-position: 7px 7px;
+    background-repeat: no-repeat;
 }

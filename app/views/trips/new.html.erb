@@ -1,60 +1,67 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <h2>Hey You! Welcome to your Penguin Research!</h2>
-      <h3>Please enter your trip name and the hometown airports you and your friends are leaving from:</h3>
+    <div class="col-md-8 col-md-offset-2">
 
+      <div class="penguin-svg text-center" style="display: flex;" >
+        <%= image_tag("penguin.png") %>
+
+        <h3 class="text-center title" style="margin-top: 5%">
+          Hey You! <br> Welcome to your <span>Penguin</span> Research!</h3>
+      </div>
+
+      <h4 class="text-center tagline">Please enter your trip name and the hometown airports you and your friends are leaving from:</h4>
 
       <%= simple_form_for @trip do |f| %>
-        <%= f.error_notification %>
+      <%= f.error_notification %>
 
-        <%= f.input :name %>
+      <%= f.input :name, id: "trip-name", label: "", placeholder: "Type trip name here!" %>
 
-        <%= f.fields_for :hometowns do |ff| %>
-          <% 10.times do |i| %>
+      <%= f.fields_for :hometowns do |ff| %>
+      <% 10.times do |i| %>
 
-          <div class="row hometown" style="display: <%= i.zero? ? 'block' : 'none'; %>">
-            <div class="col-md-5">
-              <%= ff.input :city, input_html: {autocomplete: 'off', name: "trip[hometowns][#{i}][city]", class: "autocomplete", placeholder: "Hometown airport" } %>
-            </div>
-            <div class="col-md-2">
-              <%= ff.input :Adults, input_html: { type: "hidden", name: "trip[hometowns][#{i}][number_traveller]", class: "js-input" } %>
-              <div style="display: flex; align-content: center;">
-              <button type="button" class="js-minus fas fa-sort-down"></button>
-              <a class="js-counter">0</a></p>
-              <button type="button" class="js-plus fas fa-sort-up"></button>
-              </div>
-            </div>
+      <div class="row hometown" style="display: <%= i.zero? ? 'block' : 'none'; %>">
+        <div class="col-md-6">
+          <%= ff.input :city, input_html: { autocomplete: 'off', name: "trip[hometowns][#{i}][city]", class: "autocomplete city_field", placeholder: "Hometown airport" } %>
+        </div>
 
-            <div class="col-md-2">
-              <%= ff.input :date_from, as: :string, required: false, input_html: {name: "trip[hometowns][#{i}][date_from]", id: "start_date#{i}"} %>
-            </div>
+        <div class="col-md-2" style="display: flex;">
+          <%= ff.input :date_from, as: :string, required: false,
+          input_html: {name: "trip[hometowns][#{i}][date_from]", id: "start_date#{i}" } %>
+        </div>
 
-              <div class="col-md-2">
-              <%= ff.input :date_to, as: :string, required: false, input_html: {name: "trip[hometowns][#{i}][date_to]", id: "end_date#{i}"} %>
-            </div>
+        <div class="col-md-2">
+          <%= ff.input :date_to, as: :string, required: false, input_html: {name: "trip[hometowns][#{i}][date_to]", id: "end_date#{i}"} %>
+        </div>
+
+        <div class="col-md-2">
+
+          <%= ff.input :Adults, input_html: { type: "hidden", name: "trip[hometowns][#{i}][number_traveller]", class: "js-input"} %>
+          <div style="display: flex; align-items: center;justify-content: space-between;">
+            <button type="button" class="js-minus buttons">-</button>
+            <a class="js-counter">0</a></p>
+            <button type="button" class="js-plus buttons">+</button>
           </div>
-          <% end %>
-        <% end %>
+        </div>
 
-
-     <div style="display: flex;">
-      <div class="btn-one">
-      <div class="btn-primary" id="remove-extra-field" style="width: 55px; text-align: center;">-</div>
-       </div>
-        <br>
-        <div class="btn-two">
-       <div class="btn-primary" id="add-extra-field" style="width: 55px; text-align: center;">+</div>
       </div>
-     </div>
-
-        <br>
-
-        <%= f.submit "Get results", class: "btn-primary js-open-wait" %>
-
       <% end %>
-
+      <% end %>
+<!-- <i class="far fa-plus-square"></i>
+  fas fa-sort-down -->
+  <div style="display: flex;justify-content: space-between;margin-top:4%;">
+    <div class="btn-one" style="display: flex;">
+      <div class="btn-primary buttons" id="remove-extra-field" style="border-right: 2px white solid">-</div>
+     <div class="btn-primary buttons" id="add-extra-field" style="border-left: 2px white solid">+</div>
     </div>
-  </div>
+ </div>
+
+ <br>
+
+  <%= f.submit "Get results", class: "btn-primary js-open-wait" %>
+
+ <% end %>
+
+</div>
+</div>
 
 </div>
