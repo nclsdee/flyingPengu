@@ -72,3 +72,23 @@ input:focus {
   opacity:.7;
   letter-spacing: 2px;
 }
+
+@media all and (max-width:1000px) {
+
+.datewidth {
+  div {
+  width: 100%;
+  }
+}
+
+.adults {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#adultspicker {
+  margin-left: 15px;
+}
+
+
+}
