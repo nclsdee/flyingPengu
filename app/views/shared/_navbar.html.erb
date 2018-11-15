@@ -17,18 +17,8 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-           <%= image_tag "http://www.integraconference.info/wp-content/uploads/2018/03/placeholder-face-big.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+           <%= image_tag "https://images.pexels.com/photos/60088/pexels-photo-60088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260hu", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
-              <% end %>
-            </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fas fa-sign-out-alt"></i> <%= t(".sign_out", default: "Log out") %>
@@ -53,9 +43,21 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li>
+              <%= link_to "/trips" do %>
+                <i class="fas fa-suitcase"></i> <%= t(".trip", default: "My Trips") %>
+              <% end %>
+            </li>
+        <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fas fa-sign-out-alt"></i> <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+            </li>
+        <li>
+               <%= link_to user_registration_path, method: :delete do %>
+               <i class="fas fa-trash-alt"></i> <%= t(".destroy", default: "Delete user") %>
+             <% end %>
+        </li>
       </ul>
     </div>
   </div>

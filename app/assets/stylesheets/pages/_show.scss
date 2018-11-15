@@ -1,17 +1,91 @@
-.flights {
-  padding: 5px 10px;
-  font-size: 16px;
-
-}
-
-.flightdetails {
-  margin-left: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-}
-
 .show-page {
   display: flex;
 }
+
+#map {
+  width: 50%;
+  height: 81vh;
+  margin-top: 10px;
+  position: sticky !important;
+  top: 0px;
+}
+
+.resize-map {
+
+  height: 100vh !important;
+  position: sticky;
+  top: 0px;
+}
+
+.resultsfooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#email {
+    font-size: 12px;
+    height: 42px;
+    width: 215px;
+    margin-top: 15px;
+}
+
+.heading {
+  border-bottom: 1px solid #ededed;
+  max-width: 642px;
+}
+
+#showheading {
+margin-left: 15px;
+}
+
+#tripsummary {
+margin-left: 15px;
+font-weight: lighter;
+display: flex;
+justify-content: space-between;
+span {
+  font-size: 15px;
+}
+}
+
+@media(max-width: 1000px) {
+  .show-page {
+    display: flex;
+    flex-direction: column;
+  }
+  #map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+  }
+  .results {
+    width: 100%;
+  }
+
+  .email {
+    margin: 20px auto
+  }
+
+  #email {
+    font-size: 12px;
+    height: 40px;
+    width: 200px;
+    margin-top: 15px;
+}
+
+.search-again {
+  display: flex;
+  justify-content: space-between;
+  width: 263px;
+  margin: 20px auto;
+}
+
+#tripsummary {
+  flex-direction: column;
+}
+
+
+}
+
 
