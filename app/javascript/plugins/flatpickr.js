@@ -38,7 +38,7 @@ $(document).ready(function() {
         var finalDayMoment = moment(dateStr, "DD/MM/YYYY");
         var endpicker = dateCacheEnd[index];
 
-        endpicker.set('minDate', finalDayMoment.format('DD/MM/YYYY'));
+        endpicker.set('minDate', finalDayMoment.toDate());
 
         if (index === 0) {
           $(".js-date-from").val(dateStr);
