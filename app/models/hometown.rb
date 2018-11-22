@@ -3,7 +3,7 @@ class Hometown < ApplicationRecord
 
   # validates :date_from, :date_to, :city, :number_traveller, presence: true
 
-  def self.search(city, number_traveller, date_from, date_to)
+  def self.search(city, number_traveller, date_from, date_to, direct)
     max_created_at = 1.hours.ago
 
    # city: "VIE",
@@ -15,7 +15,8 @@ class Hometown < ApplicationRecord
       city: city,
       number_traveller: number_traveller.to_i,
       date_from: date_from.to_date,
-      date_to: date_to.to_date
+      date_to: date_to.to_date,
+      direct: direct
     )
 
     query = query.where("created_at >= ?", max_created_at)
