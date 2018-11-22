@@ -23,7 +23,7 @@
 
       <%= simple_form_for @trip do |f| %>
         <%= f.error_notification %>
-        <%= f.input :name, id: "trip-name", label: "", placeholder: "Type trip name here!" %>
+        <%= f.input :name, id: "trip-name", label: "", placeholder: "Give your trip a name" %>
         <%= f.fields_for :hometowns do |ff| %>
           <% 10.times do |i| %>
             <div class="row hometown" style="display: <%= i.zero? ? 'block' : 'none'; %>">
@@ -44,6 +44,9 @@
                   <a class="js-counter">0</a>
                   <button type="button" class="js-plus buttons">+</button>
                 </div>
+             </div>
+                <%= ff.input :direct, as: :boolean, boolean_style: :inline, checked_value: 1, unchecked_value: 0, label: "Direct flights only?", class: "direct_flights", input_html: { autocomplete: 'off', name: "trip[hometowns][#{i}][direct]"}  %>
+              <div>
               </div>
             </div>
           <% end %>

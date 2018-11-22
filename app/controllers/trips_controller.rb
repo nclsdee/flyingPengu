@@ -65,7 +65,7 @@ class TripsController < ApplicationController
 
   def create
     valid_cities = trip_params[:hometowns].select {|_, hometown|
-      hometown[:city].present? &&\
+        hometown[:city].present? &&\
       hometown[:number_traveller].present? &&\
       hometown[:date_from].present? &&\
       hometown[:date_to].present?
@@ -91,14 +91,21 @@ class TripsController < ApplicationController
           hometown_params[1][:number_traveller],
           hometown_params[1][:date_from],
           hometown_params[1][:date_to],
+          hometown_params[1][:direct],
         )
 
         if previous_one
           hometown.results = previous_one.results
         else
+          if hometown_params[1][:direct].to_i == 1
+          api_url = "https://api.skypicker.com/flights?flyFrom=#{hometown_params[1][:city]}&dateFrom=#{hometown_params[1][:date_from]}&dateTo=#{hometown_params[1][:date_from]}&returnFrom=#{hometown_params[1][:date_to]}&returnTo=#{hometown_params[1][:date_to]}&adults=#{hometown_params[1][:number_traveller].to_i}&locale=en&partner=picky&v=3&xml=0&curr=EUR&price_from=1&max_stopovers=0&limit=200&sort=price&asc=1"
+          json = JSON.parse(open(api_url).read)
+          hometown.results = json
+        else
           api_url = "https://api.skypicker.com/flights?flyFrom=#{hometown_params[1][:city]}&dateFrom=#{hometown_params[1][:date_from]}&dateTo=#{hometown_params[1][:date_from]}&returnFrom=#{hometown_params[1][:date_to]}&returnTo=#{hometown_params[1][:date_to]}&adults=#{hometown_params[1][:number_traveller].to_i}&locale=en&partner=picky&v=3&xml=0&curr=EUR&price_from=1&max_stopovers=1&limit=200&sort=price&asc=1"
           json = JSON.parse(open(api_url).read)
           hometown.results = json
+        end
         end
 
         hometown.save
